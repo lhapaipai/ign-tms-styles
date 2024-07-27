@@ -31,8 +31,8 @@
      inkscape:cx="49.204757"
      inkscape:cy="65.23016"
      inkscape:window-width="1920"
-     inkscape:window-height="1048"
-     inkscape:window-x="0"
+     inkscape:window-height="1022"
+     inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg1">
@@ -69,4 +69,12 @@
      d="m 94.666667,80 c -2.208333,0 -4,1.791666 -4,4 v 6.666666 H 84 c -2.208333,0 -4,1.791668 -4,4.000001 v 2.666666 c 0,2.208335 1.791667,3.999997 4,3.999997 h 6.666667 v 17.33334 c 0,2.20833 1.791667,4 4,4 h 2.666666 c 2.208335,0 3.999997,-1.79167 3.999997,-4 V 101.33333 H 108 c 2.20833,0 4,-1.791662 4,-3.999997 v -2.666666 c 0,-2.208333 -1.79167,-4.000001 -4,-4.000001 h -6.66667 V 84 c 0,-2.208334 -1.791662,-4 -3.999997,-4 z"
      id="path1-5"
      style="stroke-width:0.0833334;fill:#000000;fill-opacity:1" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+     x="71.222992"
+     y="25.711586"
+     id="text1"><tspan
+       sodipodi:role="line"
+       id="tspan1"></tspan></text>
 </svg>

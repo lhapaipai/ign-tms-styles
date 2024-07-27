@@ -1,63 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   viewBox="0 0 32 32"
-   height="32"
-   width="32"
-   version="1.1"
-   id="svg4"
-   sodipodi:docname="parking.svg"
-   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
-   inkscape:export-filename="parking.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <defs
-     id="defs4" />
-  <sodipodi:namedview
-     id="namedview4"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="23.515152"
-     inkscape:cx="16.5"
-     inkscape:cy="16.5"
-     inkscape:window-width="1920"
-     inkscape:window-height="1022"
-     inkscape:window-x="1920"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg4" />
-  <title
-     id="title1">parking.svg</title>
-  <path
-     fill="#ffffff"
-     d="m 23.089987,17.612884 c -1.760437,1.308692 -3.922567,1.96193 -6.113139,1.846869 h -5.078892 v 8.551008 H 6.7451887 V 4.0014529 H 17.309284 c 2.087887,-0.1117356 4.144377,0.545196 5.780703,1.8468698 1.53678,1.5046449 2.316529,3.6200497 2.1239,5.7622343 0.234737,2.218829 -0.54575,4.424915 -2.1239,6.002327 z M 19.211561,8.9880015 C 18.427379,8.4139943 17.466637,8.1329008 16.496661,8.1938475 H 11.897956 V 15.24889 h 4.598705 c 0.981612,0.06021 1.950295,-0.249512 2.7149,-0.868029 0.700887,-0.728959 1.051423,-1.726084 0.960372,-2.733367 0.09973,-0.986228 -0.253576,-1.9645153 -0.960372,-2.6594925 z"
-     style="stroke-linejoin:round;stroke-miterlimit:4"
-     stroke="#ffffff"
-     stroke-width="7.38748"
-     id="path3" />
-  <path
-     fill="#000"
-     d="m 23.089987,17.612884 c -1.760437,1.308692 -3.922567,1.96193 -6.113139,1.846869 h -5.078892 v 8.551008 H 6.7451887 V 4.0014529 H 17.309284 c 2.087887,-0.1117356 4.144377,0.545196 5.780703,1.8468698 1.53678,1.5046449 2.316529,3.6200497 2.1239,5.7622343 0.234737,2.218829 -0.54575,4.424915 -2.1239,6.002327 z M 19.211561,8.9880015 C 18.427379,8.4139943 17.466637,8.1329008 16.496661,8.1938475 H 11.897956 V 15.24889 h 4.598705 c 0.981612,0.06021 1.950295,-0.249512 2.7149,-0.868029 0.700887,-0.728959 1.051423,-1.726084 0.960372,-2.733367 0.09973,-0.986228 -0.253576,-1.9645153 -0.960372,-2.6594925 z"
-     id="path4"
-     style="fill:#1f2937;fill-opacity:1;stroke-width:1.84687" />
-  <metadata
-     id="metadata4">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:title>parking.svg</dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
+<svg viewBox="0 0 128 128" version="1.1" id="svg1" sodipodi:docname="parking.svg" width="128" height="128" inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)" inkscape:export-filename="cimetiere.png" inkscape:export-xdpi="96" inkscape:export-ydpi="96"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg">
+  <defs id="defs1" />
+  <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showguides="true" showgrid="true" inkscape:zoom="4.4304659" inkscape:cx="49.204757" inkscape:cy="65.23016" inkscape:window-width="1920" inkscape:window-height="1022" inkscape:window-x="1920" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="svg1">
+    <inkscape:grid id="grid2" units="px" originx="0" originy="0" spacingx="1" spacingy="1" empcolor="#0099e5" empopacity="0.30196078" color="#0099e5" opacity="0.14901961" empspacing="16" dotted="false" gridanglex="30" gridanglez="30" visible="true" />
+  </sodipodi:namedview>
+  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+  <rect style="opacity:0.514098;fill:#e6e6e6;stroke:none;stroke-width:7.484;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke markers fill" id="rect1" width="128" height="128" x="0" y="0" />
+  <path style="fill:#000000" d="M 24.21875,43.09375 V 57.5 H 16 V 16 h 13.34375 q 4.03125,0 6.9375,1 2.90625,1 4.8125,2.78125 1.90625,1.75 2.8125,4.1875 0.90625,2.4375 0.90625,5.34375 0,3.0625 -0.96875,5.59375 -0.9375,2.53125 -2.875,4.34375 -1.90625,1.8125 -4.8125,2.84375 -2.90625,1 -6.8125,1 z m 0,-6.375 h 5.125 q 3.75,0 5.5,-1.96875 1.75,-2 1.75,-5.4375 0,-3.21875 -1.78125,-5.09375 -1.78125,-1.90625 -5.46875,-1.90625 h -5.125 z" id="text1" aria-label="P" />
+  <path style="fill:#000000" d="M 88.21875,107.09375 V 121.5 H 80 V 80 h 13.34375 q 4.03125,0 6.9375,1 2.90625,1 4.8125,2.78125 1.90625,1.75 2.8125,4.1875 0.90625,2.4375 0.90625,5.34375 0,3.0625 -0.96875,5.59375 -0.9375,2.53125 -2.875,4.34375 -1.90625,1.8125 -4.8125,2.84375 -2.90625,1 -6.8125,1 z m 0,-6.375 h 5.125 q 3.75,0 5.5,-1.96875 1.75,-2 1.75,-5.4375 0,-3.21875 -1.78125,-5.09375 -1.78125,-1.90625 -5.46875,-1.90625 h -5.125 z" id="text1-5" aria-label="P" />
 </svg>

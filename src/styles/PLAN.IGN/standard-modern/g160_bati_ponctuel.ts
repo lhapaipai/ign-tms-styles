@@ -156,6 +156,7 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
     paint: { "text-color": "#505050" },
   },
   /************************************************* */
+
   {
     id: "bati Puits-Abreuvoir",
     type: "circle",

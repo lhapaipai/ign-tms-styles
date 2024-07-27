@@ -221,6 +221,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "parking.svg",
+      searchAndReplace: [["#000000", "#aaaaaa"]],
     },
     ecluse: {
       x: 0,
