@@ -1,0 +1,34 @@
+{
+  "name": "ign-tms-styles-private",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev:server": "pnpm listhen -w ./src/server.ts",
+    "dev:viewer": "cd viewer && pnpm run dev",
+    "dev": "run-p dev:*",
+    "stats": "tsx src/stats.ts",
+    "build:sprite": "tsx src/sprites/cli.ts",
+    "build:style": "tsx src/cli.ts",
+    "build:pkg": "tsx src/generate-public-package.ts",
+    "build": "run-p build:*",
+    "lonlat:sprite": "tsx src/sprites/cli.ts --outDir ~/projets/lonlat/extra/assets/public/sprites",
+    "lonlat:style": "tsx src/cli.ts --outDir ~/projets/lonlat/extra/assets/public/styles/ign --spriteBase https://assets.lonlat.org/sprites",
+    "lonlat": "run-p lonlat:*"
+  },
+  "devDependencies": {
+    "@maplibre/maplibre-gl-style-spec": "^20.3.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^20.14.11",
+    "citty": "^0.1.6",
+    "h3": "^1.12.0",
+    "listhen": "^1.7.2",
+    "npm-run-all": "^4.1.5",
+    "sharp": "^0.33.4",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  },
+  "volta": {
+    "node": "22.5.1"
+  }
+}

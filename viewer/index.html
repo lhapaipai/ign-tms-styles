@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Editor</title>
+  </head>
+  <body>
+    <div class="maplibregl-custom-ctrl maplibregl-infobox">
+      <div id="zoom"></div>
+    </div>
+
+    <div id="comparison-container">
+      <div id="before-map"></div>
+      <div id="after-map"></div>
+    </div>
+    <script>
+      window.maplibregl = {};
+    </script>
+    <!-- <script src="https://unpkg.com/maplibre-gl@2.1.6/dist/maplibre-gl.js"></script> -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

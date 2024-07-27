@@ -1,0 +1,70 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 512px);
+}
+
+.item {
+  height: 512px;
+  width: 512px;
+}
+
+.osm-forest {
+  background-image: url("./Landuse-forest.png");
+}
+.osm-broadleaved {
+  background-image: url("./Leaftype_broadleaved.png");
+}
+.osm-leafless {
+  background-image: url("./Leaftype_leafless.png");
+}
+.osm-mixed {
+  background-image: url("./Leaftype_mixed.png");
+}
+.osm-needleleaved {
+  background-image: url("./Leaftype_needleleaved.png");
+}
+
+.grid-basic .item {
+  background-size: 12.5%;
+
+}
+
+.coniferous_wood {
+  background-image: url("./coniferous_wood.png");
+}
+.deciduous_wood {
+  background-image: url("./deciduous_wood.png");
+}
+.mixed {
+  background-image: url("./mixed.png");
+}
+.brushwood {
+  background-image: url("./brushwood.png");
+}
+.sand {
+  background-image: url("./sand.png");
+}
+.wet_sand {
+  background-image: url("./wet_sand.png");
+}
+.marsh {
+  background-image: url("./marsh.png");
+}
+.brushwood {
+  background-image: url("./brushwood.png");
+}
+.salt_marsh {
+  background-image: url("./salt_marsh.png");
+}
+.gravier {
+  background-image: url("./gravier.png");
+}
+.wet_gravier {
+  background-image: url("./wet_gravier.png");
+}
+.glacier {
+  background-image: url("./glacier.png");
+}
+.hydro_rock {
+  background-image: url("./hydro_rock.png");
+}

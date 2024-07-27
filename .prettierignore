@@ -1,0 +1,3 @@
+.local/queries
+src/styles/**/colors.ts
+src/styles/**/vars.ts
