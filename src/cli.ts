@@ -5,7 +5,7 @@ import { buildStyle } from "./build-style";
 import configs from "./styles";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
-const defaultOutDir = resolve(scriptDir, `../../dist`);
+const defaultOutDir = resolve(scriptDir, `../dist`);
 
 type ConfigName = keyof typeof configs;
 

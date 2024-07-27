@@ -16,7 +16,7 @@ fi
 
 VERSION=$(npm --no-git-tag-version --allow-same-version version $VERSION_TYPE)
 
-# we remove the v before version X.Y.Z
+# # we remove the v before version X.Y.Z
 VERSION=${VERSION:1}
 
 git add .
