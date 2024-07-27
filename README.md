@@ -1,13 +1,61 @@
 # Styles pour le service de tuiles vectorielles de l'IGN
 
-Ces styles ne sont pas officiels.
+<a href="https://maplibre-react-components.pentatrion.com">
+<img src="https://raw.githubusercontent.com/lhapaipai/ign-tms-styles/main/screenshot.png" alt="IGN TMS styles" />
+</a>
 
-https://unpkg.com/ign-tms-styles@0.0.1/PLAN.IGN/standard-modern.json
-https://unpkg.com/ign-tms-styles@0.0.1/PLAN.IGN/standard.json
+> [!IMPORTANT]
+> Ces styles ne sont pas officiels.
 
-https://unpkg.com/ign-tms-styles@0.0.1/sprites/basic.png
+## Usage
+
+Vous pouvez utiliser le style directement depuis `unpkg.com`.
+
+l'url est de la forme :
+- `https://unpkg.com/ign-tms-styles/{Layer}/{style}.json`
+- `https://unpkg.com/ign-tms-styles@{version}/{Layer}/{style}.json`
+
+- si vous ne précisez pas de `version` ce sera la dernière version disponible qui sera téléchargée.
+
+Pour le choix entre `Layer`, `style`
+```
+.
+└── PLAN.IGN
+    ├── standard
+    └── modern
+```
+
+## Exemple
+
+```js
+import { Map } from "maplibre-gl";
+import "./style.css";
+import "maplibre-gl/dist/maplibre-gl.css";
+
+new Map({
+  container: "map",
+  center: [1.3, 46.9],
+  zoom: 5,
+  style: "https://unpkg.com/ign-tms-styles@0.0.2/PLAN.IGN/modern.json",
+});
+```
+
+## Documentation
+
+- [service TMS](https://geoservices.ign.fr/documentation/services/services-geoplateforme/diffusion#70064) de l'IGN
+
+- [bibliothèque de styles](https://geoservices.ign.fr/documentation/services/api-et-services-ogc/tuiles-vectorielles-tmswmts/styles) de l'IGN
+
+
+## Exécutables
+
 
 ```bash
+pnpm tsx src/cli.ts --help
+pnpm tsx src/sprites/cli.ts --help
+
+# usages courants
+
 # pour regénérer les png manquants et le sprite
 pnpm tsx src/sprites/cli.ts
 

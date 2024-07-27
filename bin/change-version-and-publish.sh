@@ -28,3 +28,4 @@ pnpm run build:sprite
 pnpm tsx src/cli.ts --spriteBase https://unpkg.com/ign-tms-styles@$VERSION/sprites
 pnpm tsx src/generate-public-package.ts
 
+cd dist && pnpm publish
