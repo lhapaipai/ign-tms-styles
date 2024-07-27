@@ -1,8 +1,5 @@
-import {
-  DataDrivenPropertyValueSpecification,
-  LayerSpecification,
-  SymbolLayerSpecification,
-} from "@maplibre/maplibre-gl-style-spec";
+import { DataDrivenPropertyValueSpecification, LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
+import { cToponyme, toponymeHydroPaint } from "./vars";
 
 const importantLineaire = [
   "OCEAN_MER",
@@ -28,12 +25,6 @@ const secondaireSize: DataDrivenPropertyValueSpecification<number> = [
   19,
 ];
 
-const hydroPaint: SymbolLayerSpecification["paint"] = {
-  "text-color": "#447FB3",
-  "text-halo-width": 2,
-  "text-halo-color": "rgba(255, 255, 255, 0.75)",
-};
-
 export const g210_toponyme_hydro: LayerSpecification[] = [
   {
     id: "toponyme - hydro lineaire principal et glacier",
@@ -48,7 +39,7 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-padding": 10,
       "text-font": ["Source Sans Pro Regular"],
     },
-    paint: hydroPaint,
+    paint: toponymeHydroPaint,
   },
   {
     id: "toponyme - hydro lineaire secondaire",
@@ -63,7 +54,7 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-padding": 10,
       "text-font": ["Source Sans Pro Regular"],
     },
-    paint: hydroPaint,
+    paint: toponymeHydroPaint,
   },
   {
     id: "toponyme - hydro ponc ocean",
@@ -84,7 +75,7 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": "#fff",
+      "text-color": cToponyme.textMarinPrincipal,
     },
   },
   {
@@ -117,7 +108,7 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-padding": 10,
       "text-font": ["Source Sans Pro Regular"],
     },
-    paint: hydroPaint,
+    paint: toponymeHydroPaint,
   },
   {
     id: "toponyme - hydro ponc secondaire",
@@ -154,7 +145,7 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-padding": 10,
       "text-font": ["Source Sans Pro Regular"],
     },
-    paint: hydroPaint,
+    paint: toponymeHydroPaint,
   },
   {
     id: "toponyme - hydro ponc tertiaire",
@@ -175,6 +166,6 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-padding": 5,
       "text-font": ["Source Sans Pro Regular"],
     },
-    paint: hydroPaint,
+    paint: toponymeHydroPaint,
   },
 ];

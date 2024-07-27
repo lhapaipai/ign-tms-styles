@@ -53,7 +53,7 @@ import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
  * Certains éléments aérien de `bati_lin` comme les cables et les remontées
  * mécaniques apparaissent dans g150_autre_aerien
  */
-export const g080_bati_lineaire: LayerSpecification[] = [
+export const g097_bati_lineaire: LayerSpecification[] = [
   {
     id: "construction linéaire - au sol",
     type: "line",

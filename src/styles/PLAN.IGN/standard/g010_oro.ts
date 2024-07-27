@@ -11,6 +11,18 @@ export const g010_oro: LayerSpecification[] = [
     paint: { "fill-color": "#FFFFFF", "fill-opacity": 1 },
   },
   {
+    id: "ocean - mer",
+    type: "fill",
+    source: "plan_ign",
+    "source-layer": "hydro_surf",
+    minzoom: 0,
+    maxzoom: 20,
+    filter: ["==", ["get", "symbo"], "ZONE_MARINE"],
+    paint: {
+      "fill-color": "#AAD5E9",
+    },
+  },
+  {
     id: "orographie : relief - 0m",
     type: "fill",
     source: "plan_ign",

@@ -2,8 +2,10 @@
 
 Ces styles ne sont pas officiels.
 
+https://unpkg.com/ign-tms-styles@0.0.1/PLAN.IGN/standard-modern.json
+https://unpkg.com/ign-tms-styles@0.0.1/PLAN.IGN/standard.json
 
-
+https://unpkg.com/ign-tms-styles@0.0.1/sprites/basic.png
 
 ```bash
 # pour regénérer les png manquants et le sprite

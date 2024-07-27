@@ -10,7 +10,7 @@ import { getStyleURL } from "./util";
 import LayersControl from "./controls/LayersControl";
 
 const beforeStyleDir = "PLAN.IGN/standard";
-const afterStyleDir = "PLAN.IGN/standard-modern";
+const afterStyleDir = "PLAN.IGN/modern";
 
 const initialCenter: [number, number] = [1.3, 46.9];
 const initialZoom = 5;

@@ -61,9 +61,8 @@ export const g250_toponyme_oro: LayerSpecification[] = [
     },
     paint: {
       "text-color": cOroText,
-      "text-halo-color": "#fff",
-      "text-halo-width": 1,
       "text-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.3, 13, 0.6],
+      ...toponymeHalo,
     },
   },
   /***************************************************************** */

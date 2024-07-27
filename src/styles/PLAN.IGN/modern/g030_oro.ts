@@ -1,4 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
+import { cOroCourbe, toponymeHalo } from "./vars";
 
 /**
  * oro_lin : lignes de falaises. on n'en trouve pas beaucoup en haute savoie
@@ -7,10 +8,6 @@ import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
  * les calques `NORMALE` ET `MAITRESSE` n'ont pas été fusionnés ensemble car
  * il ne peux y avoir qu'une seule interpolation par calque.
  */
-
-// const cSol = "#604a2f"; // "#D9C8A9"
-// const cRocher = "#333333"; // "#AAAAAA"
-// const cGlacier = "#629FD9"; // "#A4BFD9"
 
 export const g030_oro: LayerSpecification[] = [
   {
@@ -43,12 +40,12 @@ export const g030_oro: LayerSpecification[] = [
         "match",
         ["get", "symbo"],
         ["CNV_MAITRESSE", "CUVETTE_MAITRESSE"],
-        "#D9C8A9",
+        cOroCourbe.sol.maitresse,
         ["CNV_GLACIER_MAITRESSE", "CUV_GLACIER_MAITRESSE"],
-        "#A4BFD9",
+        cOroCourbe.glacier.maitresse,
         ["CNV_ROCHER_MAITRESSE", "CUV_ROCHER_MAITRESSE"],
-        "#aaaaaa",
-        "#D9C8A9",
+        cOroCourbe.rocher.maitresse,
+        cOroCourbe.sol.maitresse,
       ],
       "line-width": ["interpolate", ["linear"], ["zoom"], 13, 1.7, 15, 2, 18, 4],
     },
@@ -83,12 +80,12 @@ export const g030_oro: LayerSpecification[] = [
         "match",
         ["get", "symbo"],
         ["CNV_NORMALE", "CUVETTE_NORMALE"],
-        "#d9d1c2",
+        cOroCourbe.sol.normale,
         ["CNV_GLACIER_NORMALE", "CUV_GLACIER_NORMALE"],
-        "#A4BFD9",
+        cOroCourbe.glacier.normale,
         ["CNV_ROCHER_NORMALE", "CUV_ROCHER_NORMALE"],
-        "#AAAAAA",
-        "#d9d1c2",
+        cOroCourbe.rocher.normale,
+        cOroCourbe.sol.normale,
       ],
       "line-width": ["interpolate", ["linear"], ["zoom"], 13, 1, 15, 1.2, 18, 2],
     },
@@ -107,7 +104,7 @@ export const g030_oro: LayerSpecification[] = [
       "line-cap": "round",
       "line-join": "round",
     },
-    paint: { "line-color": "#D9C8A9", "line-width": 1 },
+    paint: { "line-color": cOroCourbe.talus, "line-width": 1 },
   },
   {
     id: "oro lin - talus - trait perpendiculaire",
@@ -123,7 +120,7 @@ export const g030_oro: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#D9C8A9",
+      "line-color": cOroCourbe.talus,
       "line-width": ["interpolate", ["linear"], ["zoom"], 14, 7, 16, 9],
       "line-dasharray": [0.1, 1],
       "line-offset": 4,
@@ -156,13 +153,12 @@ export const g030_oro: LayerSpecification[] = [
         "match",
         ["get", "txt_typo"],
         "ORO_COURBE_ROCHER",
-        "#333333",
+        cOroCourbe.rocher.text,
         "ORO_COURBE_GLACIER",
-        "#629FD9",
-        "#604A2F",
+        cOroCourbe.glacier.text,
+        cOroCourbe.sol.text,
       ],
-      "text-halo-color": "#fff",
-      "text-halo-width": 1,
+      ...toponymeHalo,
     },
   },
   /**
@@ -212,15 +208,14 @@ export const g030_oro: LayerSpecification[] = [
         "match",
         ["get", "symbo"],
         ["CNV_MAITRESSE", "CUVETTE_MAITRESSE"],
-        "#604A2F",
+        cOroCourbe.sol.text,
         ["CNV_GLACIER_MAITRESSE", "CUV_GLACIER_MAITRESSE"],
-        "#629FD9",
+        cOroCourbe.glacier.text,
         ["CNV_ROCHER_MAITRESSE", "CUV_ROCHER_MAITRESSE"],
-        "#333333",
-        "#604A2F",
+        cOroCourbe.rocher.text,
+        cOroCourbe.sol.text,
       ],
-      "text-halo-width": 0.5,
-      "text-halo-color": "#FFFFFF",
+      ...toponymeHalo,
     },
   },
 ];

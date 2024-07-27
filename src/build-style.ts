@@ -16,7 +16,7 @@ export type BuildStyleOptions = {
 };
 
 export async function buildStyle(name: ConfigName, { outDir, spriteBase }: BuildStyleOptions) {
-  const { stylePath, layerGroups, sprite } = configs[name];
+  const { layerGroups, sprite } = configs[name];
 
   const layerGroupsId = Object.keys(layerGroups) as (keyof typeof layerGroups)[];
 
@@ -30,7 +30,7 @@ export async function buildStyle(name: ConfigName, { outDir, spriteBase }: Build
 
   await mkdir(buildDir, { recursive: true });
 
-  const outPath = resolve(outDir, stylePath);
+  const outPath = resolve(outDir, `${name}.json`);
   await mkdir(dirname(outPath), { recursive: true });
   await writeFile(outPath, JSON.stringify(style), { encoding: "utf-8" });
 }

@@ -1,5 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { cNatureText, toponymeHalo } from "./vars";
+import { cNatureText, cToponyme, toponymeHalo } from "./vars";
 
 export const g240_toponyme_ocs: LayerSpecification[] = [
   {
@@ -28,7 +28,7 @@ export const g240_toponyme_ocs: LayerSpecification[] = [
       "text-allow-overlap": true,
     },
     paint: {
-      "text-color": "#000000",
+      "text-color": cToponyme.textDefault,
       ...toponymeHalo,
     },
   },

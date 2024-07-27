@@ -1,14 +1,14 @@
 import { createApp, createRouter, defineEventHandler, getQuery, getRouterParams, handleCors } from "h3";
 
 import * as standardLayers from "./styles/PLAN.IGN/standard";
-import * as standardModernLayers from "./styles/PLAN.IGN/standard-modern";
+import * as standardModernLayers from "./styles/PLAN.IGN/modern";
 
 import { basename } from "node:path";
 import { generateStyle } from "./util";
 
 const layerGroupsByStyle = {
   standard: standardLayers,
-  "standard-modern": standardModernLayers,
+  modern: standardModernLayers,
 };
 
 export const app = createApp();
@@ -28,9 +28,9 @@ router.get(
   "/:resource/:style",
   defineEventHandler(async (event) => {
     const params = getRouterParams(event);
-    const style = basename(params.style, ".json") as "standard" | "standard-modern";
+    const style = basename(params.style, ".json") as "standard" | "modern";
 
-    if (!["standard", "standard-modern"].includes(style)) {
+    if (!["standard", "modern"].includes(style)) {
       throw new Error("style query parameter !");
     }
 

@@ -1,14 +1,12 @@
 import * as standardLayers from "./PLAN.IGN/standard/index";
-import * as standardModernLayers from "./PLAN.IGN/standard-modern/index";
+import * as standardModernLayers from "./PLAN.IGN/modern/index";
 
 const configs = {
-  standard: {
-    stylePath: "PLAN.IGN/standard.json",
+  "PLAN.IGN/standard": {
     layerGroups: standardLayers,
     sprite: "PlanIgn",
   },
-  "standard-modern": {
-    stylePath: "PLAN.IGN/standard-modern.json",
+  "PLAN.IGN/modern": {
     layerGroups: standardModernLayers,
     sprite: "basic",
   },

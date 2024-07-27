@@ -1,4 +1,4 @@
-import { DataDrivenPropertyValueSpecification, SymbolLayerSpecification } from "@maplibre/maplibre-gl-style-spec";
+import { CircleLayerSpecification, DataDrivenPropertyValueSpecification, SymbolLayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
 export const pont = {
   wFiletExt: ["interpolate", ["linear"], ["zoom"], 9, 4, 14, 7.5, 16, 20, 17, 34],
@@ -23,7 +23,7 @@ export const cAutorouteExt =  [             "#DE460E",                          
 export const cAutorouteInt =  [  "#fff",    "#F18800",                                               "#F2B230"];
 export const cPrincipaleExt =               "#E2A52A"                                                          ;
 export const cPrincipaleInt = [  "#fff",    "#F3C66D",                                               "#F2DDB3"];
-export const cRegionaleExt =                "#B4B4B4"                                                          ;
+export const cRegionaleExt =                           "#B4B4B4"                                               ;
 export const cRegionaleInt =  [                        "#FDF28B",                                    "#FCF6BD"];
 export const cLocaleExt =     [                        "#8C8C8C", "#B4B4B4"                                   ];
 export const cLocaleInt =     [                        "#ffffff", "#FCF4A8",                         "#FCF6BD"];
@@ -34,8 +34,7 @@ export const cNontRevetueInt =                                    "#ffffff"     
 export const cSentier =       [                                              "#a68e91", "#8c7274"             ];
 export const cChemin =        [                                              "#bcaaac", "#8c7274"             ];
 
-export const cHydro = "#aad5e9";
-export const cHydroText = "#5792C2";
+
 
 export const cNatureText = "#287B00";
 
@@ -45,41 +44,96 @@ export const cOroMassifText = "#e18f88";
 export const cText = "#1f2937";
 
 export const cOroRelief = {
-  bg: "#F7FAF5",
-  hypso0: ["#D6E5BA", "#FCFDFC"],
-  hypso100: ["#C7E2A1", "#F7FAF5"],
-  hypso200: ["#B0D98F", "#EBF1E5"],
+  bg:        ["#F7FAF5", "#ffffff"],
+  hypso0:    ["#D6E5BA", "#FCFDFC"],
+  hypso100:  ["#C7E2A1", "#F7FAF5"],
+  hypso200:  ["#B0D98F", "#EBF1E5"],
   hypso1000: ["#ebdebf", "#F3EBD8"],
   hypso3000: ["#DABE97", "#EBDEBF"],
   hypso4000: ["#B28773", "#D2B8AD"],
   hypso5000: ["#9E6A54", "#C19F8F"],
-  glacier: "#fff",
+  glacier:    "#ffffff",
 };
 
+export const cOroCourbe = {
+  talus: "#d9c8a9",
+  sol: {
+    maitresse: "#D9C8A9",
+    normale:   "#d9d1c2",
+    text:      "#604a2f"
+  },
+  rocher: {
+    maitresse: "#aaaaaa",
+    normale:   "#AAAAAA",
+    text:      "#333333"
+  },
+  glacier: {
+    maitresse: "#A4BFD9",
+    normale:   "#A4BFD9",
+    text:      "#629FD9"
+  }
+}
 /**
  * essayer de faire correspondre hypso200[1] avec cOcsVegetation.foret
  */
 export const cOcsVegetation = {
-  foret: "#dfe8d5" /* zoom faible -> toutes les forêts, zoom fort -> forêts mixe uniquement */,
-  foretConi: "#c7d4b9",
-  foretFeuil: "#e6edd8",
+  foret:        "#dfe8d5" /* zoom faible -> toutes les forêts, zoom fort -> forêts mixe uniquement */,
+  foretConi:    "#c7d4b9",
+  foretFeuil:   "#e6edd8",
   foretOuverte: "#EDF2D9",
-  peupleraie: "#DFE8D5",
-  landeLigneuse: "#F2EECD",
-  vigne: "#FFEDD9",
-  verger: "#FAEDFA",
-  canneBanane: "#FAEDFA",
-  estran: "#C3DDE9",
-  mangrove: "#85CCCB",
+  peupleraie:   "#DFE8D5",
+  landeLigneuse:"#F2EECD",
+  vigne:        "#FFEDD9",
+  verger:       "#FAEDFA",
+  canneBanane:  "#FAEDFA",
+  estran:       "#C3DDE9",
+  mangrove:     "#85CCCB",
 };
+
+
 
 export const cOcsBati = {
   indusActi: "#D9D9D9",
 };
 
+export const cHydro = {
+  default:       "#aad5e9",
+  estran:        "#c3dde9",
+  marais:        "#d6e6d3",
+  eauTemporaire: "#d4e5ee"
+}
+
+
+export const toponymeHaloColor = "#fff";
+
+export const cToponyme = {
+  halo: "#fff",
+  haloHydro: "rgba(255, 255, 255, .75)",
+  textDefaultFadeIn: "#444",
+  textDefault: "#000",
+  textRoute: cAutorouteInt[1],
+  textLimiteParc: "#287b00",
+  textLimiteMilitaire: "#0d2000",
+  textLimiteMarin: "#2a81a2",
+  textMarinPrincipal: "#fff",
+  textHydro: "#5792C2"
+}
+
 export const toponymeHalo: SymbolLayerSpecification["paint"] = {
-  "text-halo-color": "#fff",
+  "text-halo-color": cToponyme.halo,
   "text-halo-width": 1,
+};
+
+export const toponymeHydroPaint: SymbolLayerSpecification["paint"] = {
+  "text-color": cToponyme.textHydro,
+  "text-halo-color": cToponyme.haloHydro,
+  "text-halo-width": 2,
+};
+
+export const circleDefaultPaint: CircleLayerSpecification["paint"] = {
+  "circle-color": "#fff",
+  "circle-stroke-color": "#555",
+  "circle-stroke-width": 1,
 };
 
 export const autoroute = {

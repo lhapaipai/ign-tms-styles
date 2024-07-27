@@ -192,7 +192,7 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
     filter: ["==", ["get", "symbo"], "RESERVOIR_EAU_PONC"],
     paint: {
       "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 8],
-      "circle-color": cHydro,
+      "circle-color": cHydro.default,
       "circle-opacity": 1,
       "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 17, 2.5],
       "circle-stroke-color": "#1466B2",

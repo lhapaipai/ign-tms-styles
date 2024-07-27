@@ -1,5 +1,5 @@
 import { CircleLayerSpecification, LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { toponymeHalo } from "./vars";
+import { circleDefaultPaint, cToponyme, toponymeHalo } from "./vars";
 
 /**
  * les placements sont effectués de bas en haut
@@ -53,12 +53,6 @@ import { toponymeHalo } from "./vars";
  * quand bien même le cas se produisait, les règles sont les mêmes...
  */
 
-const circleDefaultPaint: CircleLayerSpecification["paint"] = {
-  "circle-color": "#fff",
-  "circle-stroke-color": "#555",
-  "circle-stroke-width": 1,
-};
-
 export const g270_toponyme_localite: LayerSpecification[] = [
   {
     id: "toponyme localite n0 typoA10",
@@ -77,7 +71,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Italic"],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 15, "#444", 17, "#000"],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 15, cToponyme.textDefaultFadeIn, 17, cToponyme.textDefault],
       ...toponymeHalo,
     },
   },
@@ -99,7 +93,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 14, "#444", 16, "#000"],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 14, cToponyme.textDefaultFadeIn, 16, cToponyme.textDefault],
       ...toponymeHalo,
     },
   },
@@ -120,7 +114,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 14, "#444", 16, "#000"],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 14, cToponyme.textDefaultFadeIn, 16, cToponyme.textDefault],
       ...toponymeHalo,
     },
   },
@@ -142,7 +136,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
     },
     paint: {
       ...toponymeHalo,
-      "text-color": ["interpolate", ["linear"], ["zoom"], 13, "#444", 15, "#000"],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 13, cToponyme.textDefaultFadeIn, 15, cToponyme.textDefault],
     },
   },
   {
@@ -162,7 +156,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": "#000",
+      "text-color": cToponyme.textDefault,
       ...toponymeHalo,
     },
   },
@@ -184,7 +178,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": "#000",
+      "text-color": cToponyme.textDefault,
       ...toponymeHalo,
     },
   },
@@ -206,7 +200,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Semibold"],
     },
     paint: {
-      "text-color": "#000",
+      "text-color": cToponyme.textDefault,
       ...toponymeHalo,
     },
   },
@@ -227,7 +221,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Semibold"],
     },
     paint: {
-      "text-color": "#000",
+      "text-color": cToponyme.textDefault,
       ...toponymeHalo,
     },
   },
@@ -249,7 +243,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Bold"],
     },
     paint: {
-      "text-color": "#000",
+      "text-color": cToponyme.textDefault,
       ...toponymeHalo,
     },
   },
@@ -364,7 +358,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 11, "#444", 12, "#000"],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 11, cToponyme.textDefaultFadeIn, 12, cToponyme.textDefault],
 
       ...toponymeHalo,
     },
@@ -420,7 +414,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
     },
     paint: {
       // "text-color": "green",
-      "text-color": ["interpolate", ["linear"], ["zoom"], 11, "#444", 12, "#000"],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 11, cToponyme.textDefaultFadeIn, 12, cToponyme.textDefault],
       ...toponymeHalo,
     },
   },
@@ -445,7 +439,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 7, "#444", 9, "#000"],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 7, cToponyme.textDefaultFadeIn, 9, cToponyme.textDefault],
       ...toponymeHalo,
     },
   },
@@ -479,7 +473,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       ],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 6, "#444", 8, "#000"],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 6, cToponyme.textDefaultFadeIn, 8, cToponyme.textDefault],
       ...toponymeHalo,
     },
   },
@@ -517,7 +511,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       ],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 5, "#444", 7, "#000"],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 5, cToponyme.textDefaultFadeIn, 7, cToponyme.textDefault],
       ...toponymeHalo,
     },
   },
@@ -561,7 +555,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       ],
     },
     paint: {
-      "text-color": "#000",
+      "text-color": cToponyme.textDefault,
       ...toponymeHalo,
     },
   },
@@ -596,7 +590,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Semibold"],
     },
     paint: {
-      "text-color": "#000",
+      "text-color": cToponyme.textDefault,
       ...toponymeHalo,
     },
   },
@@ -618,7 +612,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Semibold"],
     },
     paint: {
-      "text-color": "#000",
+      "text-color": cToponyme.textDefault,
       ...toponymeHalo,
     },
   },

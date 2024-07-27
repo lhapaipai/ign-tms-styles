@@ -2,7 +2,7 @@ import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 import {
   autoroute,
   chemin,
-  cHydroText,
+  cToponyme,
   pont,
   routeLocale,
   routeNonClassee,
@@ -567,7 +567,7 @@ export const g090_routier_a_niveau: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydroText,
+      "line-color": cToponyme.textHydro,
       "line-width": ["interpolate", ["linear"], ["zoom"], 8, 1, 13, 2.5],
     },
   },

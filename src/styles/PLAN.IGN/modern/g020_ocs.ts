@@ -159,6 +159,10 @@ export const g020_ocs: LayerSpecification[] = [
       "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.5, 12, 0.3],
     },
   },
+  /**
+   * placé bien en amont des autres bati_zone_surf car il s'agit d'une grosse zone
+   * comme il est opaque cela peut masquer beaucoup de composants.
+   */
   {
     id: "zone d'activité",
     type: "fill",

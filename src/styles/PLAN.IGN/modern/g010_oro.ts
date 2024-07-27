@@ -1,5 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { cOroRelief } from "./vars";
+import { cHydro, cOroRelief } from "./vars";
 
 export const g010_oro: LayerSpecification[] = [
   {
@@ -9,7 +9,19 @@ export const g010_oro: LayerSpecification[] = [
     source: "plan_ign",
     "source-layer": "fond_opaque",
     minzoom: 0,
-    paint: { "fill-color": ["interpolate", ["linear"], ["zoom"], 8, cOroRelief.bg, 9, "#ffffff"] },
+    paint: { "fill-color": ["interpolate", ["linear"], ["zoom"], 8, cOroRelief.bg[0], 9, cOroRelief.bg[1]] },
+  },
+  {
+    id: "ocean - mer",
+    type: "fill",
+    source: "plan_ign",
+    "source-layer": "hydro_surf",
+    minzoom: 0,
+    maxzoom: 20,
+    filter: ["==", ["get", "symbo"], "ZONE_MARINE"],
+    paint: {
+      "fill-color": cHydro.default,
+    },
   },
   {
     id: "orographie : relief - 0m",
