@@ -85,7 +85,7 @@ const sprite: Sprite = {
     },
 
     "rocher-hydro": {
-      x: 156,
+      x: 256,
       y: 256,
       width: 128,
       height: 128,

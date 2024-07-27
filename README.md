@@ -1,6 +1,6 @@
 # Styles pour le service de tuiles vectorielles de l'IGN
 
-<a href="https://maplibre-react-components.pentatrion.com">
+<a href="https://ign-tms-styles.pentatrion.com">
 <img src="https://raw.githubusercontent.com/lhapaipai/ign-tms-styles/main/screenshot.png" alt="IGN TMS styles" />
 </a>
 

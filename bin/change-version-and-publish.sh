@@ -19,13 +19,13 @@ VERSION=$(npm --no-git-tag-version --allow-same-version version $VERSION_TYPE)
 # # we remove the v before version X.Y.Z
 VERSION=${VERSION:1}
 
-git add .
-git commit -m "change version $VERSION"
-
-git tag -a "$VERSION" -m "$VERSION"
-
 pnpm run build:sprite
 pnpm tsx src/cli.ts --spriteBase https://unpkg.com/ign-tms-styles@$VERSION/sprites
 pnpm tsx src/generate-public-package.ts
+
+git add .
+git commit -m "change version $VERSION"
+git tag -a "$VERSION" -m "$VERSION"
+git push origin
 
 cd dist && pnpm publish
