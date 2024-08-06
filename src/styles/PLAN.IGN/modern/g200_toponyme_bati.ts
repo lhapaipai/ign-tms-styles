@@ -1,5 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { toponymeHalo } from "./vars";
+import { bati, toponymeHalo } from "./vars";
 
 /**
  * ZAI : Zone d'activité ou d'intérêt
@@ -55,7 +55,7 @@ export const g200_toponyme_bati: LayerSpecification[] = [
         "match",
         ["get", "symbo"],
         ["GARE_VOYAGEURS", "STATION_METRO"],
-        "#4338CA", // indigo 700
+        bati.gare.cText,
         [
           "CATHEDRALE",
           "ABBAYE",
@@ -67,15 +67,15 @@ export const g200_toponyme_bati: LayerSpecification[] = [
           "CULTE_ISRAELITE",
           "CULTE_CHRETIEN",
         ],
-        "#7e22ce", // purple 700
+        bati.culte.cText,
         ["AEROPORT", "AEROGARE", "AERODROME"],
-        "#4B5563",
+        bati.aeroport.cText,
         ["USINE_PRODUCTION_EAU", "STATION_EPURATION", "STATION_DE_POMPAGE"],
-        "#447FB3",
+        bati.traitementEau.cText,
         ["CHATEAU_FORT", "CHATEAU"],
-        "#1F2937",
+        bati.monument.cText,
         "ZAI",
-        "#9a3412", // orange 800
+        bati.public.cText,
         "yellow", // stone 800
       ],
       ...toponymeHalo,

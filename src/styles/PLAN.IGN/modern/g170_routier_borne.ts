@@ -1,5 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { toponymeHalo } from "./vars";
+import { cToponyme, toponymeHalo } from "./vars";
 
 export const g170_routier_borne: LayerSpecification[] = [
   {
@@ -8,7 +8,10 @@ export const g170_routier_borne: LayerSpecification[] = [
     source: "plan_ign",
     "source-layer": "toponyme_routier_borne",
     minzoom: 17,
-    maxzoom: 20,
+    /**
+     * malheureusement cela ne dépasse pas le zoom 18.
+     */
+    maxzoom: 18,
 
     layout: {
       "symbol-placement": "line",
@@ -20,7 +23,7 @@ export const g170_routier_borne: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": "#79654F",
+      "text-color": cToponyme.textBornePostale,
       ...toponymeHalo,
     },
   },
@@ -31,7 +34,7 @@ export const g170_routier_borne: LayerSpecification[] = [
     source: "plan_ign",
     "source-layer": "toponyme_routier_borne",
     minzoom: 17,
-    maxzoom: 20,
+    maxzoom: 18,
     layout: {
       "symbol-placement": "line",
       "text-field": ["to-string", ["get", "borne_sous"]],
@@ -42,7 +45,7 @@ export const g170_routier_borne: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": "#79654F",
+      "text-color": cToponyme.textBornePostale,
       ...toponymeHalo,
     },
   },

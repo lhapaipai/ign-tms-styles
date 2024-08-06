@@ -1,6 +1,8 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 import {
   autoroute,
+  cPisteCyclable,
+  cSouterrainFiletInterieur,
   routeLocale,
   routeNonClassee,
   routeNonClasseeRestreint,
@@ -24,7 +26,8 @@ export const g051_routier_souterrain: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#AB81CC",
+      "line-color": cPisteCyclable,
+      "line-opacity": 0.5,
       "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1.1, 15, 1.7, 16, 2, 17, 3.5],
       "line-dasharray": [6, 2],
     },
@@ -155,7 +158,6 @@ export const g051_routier_souterrain: LayerSpecification[] = [
     },
     paint: {
       "line-opacity": ["match", ["get", "symbo"], ["LOCALE_CONSTR_SOU"], 0.1, 0.5],
-      // "line-color": "rgba(130, 130, 130, 0.5)",
       "line-color": routeLocale.cFiletExt,
       "line-width": routeLocale.wFiletExt,
     },
@@ -188,7 +190,6 @@ export const g051_routier_souterrain: LayerSpecification[] = [
     },
     paint: {
       "line-opacity": ["match", ["get", "symbo"], ["REGIONALE_CONSTR_SOU"], 0.1, 0.5],
-      // "line-color": "rgba(130, 130, 130, 0.5)",
       "line-color": routeRegionale.cFiletExt,
       "line-width": routeRegionale.wFiletExt,
     },
@@ -256,7 +257,7 @@ export const g051_routier_souterrain: LayerSpecification[] = [
     },
     paint: {
       "line-opacity": 0.5,
-      "line-color": "#fff",
+      "line-color": cSouterrainFiletInterieur,
       "line-width": routeNonRevetue.wFiletInt,
     },
   },
@@ -286,7 +287,8 @@ export const g051_routier_souterrain: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "rgba(255, 255, 255, 0.5)",
+      "line-opacity": 0.5,
+      "line-color": cSouterrainFiletInterieur,
       "line-width": autoroute.wFiletIntBretelle,
     },
   },
@@ -304,7 +306,7 @@ export const g051_routier_souterrain: LayerSpecification[] = [
     },
     paint: {
       "line-opacity": 0.5,
-      "line-color": "#fff",
+      "line-color": cSouterrainFiletInterieur,
       "line-width": routeNonClasseeRestreint.wFiletInt,
     },
   },
@@ -322,7 +324,7 @@ export const g051_routier_souterrain: LayerSpecification[] = [
     },
     paint: {
       "line-opacity": 0.5,
-      "line-color": "#fff",
+      "line-color": cSouterrainFiletInterieur,
       "line-width": routeNonClassee.wFiletInt,
     },
   },
@@ -346,7 +348,7 @@ export const g051_routier_souterrain: LayerSpecification[] = [
     },
     paint: {
       "line-opacity": ["match", ["get", "symbo"], ["LOCALE_CONSTR_SOU"], 0.1, 0.5],
-      "line-color": "#fff",
+      "line-color": cSouterrainFiletInterieur,
       "line-width": routeLocale.wFiletInt,
     },
   },
@@ -377,7 +379,7 @@ export const g051_routier_souterrain: LayerSpecification[] = [
     },
     paint: {
       "line-opacity": ["match", ["get", "symbo"], ["REGIONALE_CONSTR_SOU"], 0.1, 0.5],
-      "line-color": "#fff",
+      "line-color": cSouterrainFiletInterieur,
       "line-width": routeRegionale.wFiletInt,
     },
   },
@@ -408,7 +410,7 @@ export const g051_routier_souterrain: LayerSpecification[] = [
     },
     paint: {
       "line-opacity": ["match", ["get", "symbo"], ["PRINCIPALE_CONSTR_SOU"], 0.1, 0.5],
-      "line-color": "#fff",
+      "line-color": cSouterrainFiletInterieur,
       "line-width": routePrincipale.wFiletInt,
     },
   },
@@ -426,7 +428,7 @@ export const g051_routier_souterrain: LayerSpecification[] = [
     },
     paint: {
       "line-opacity": ["match", ["get", "symbo"], ["AUTOROU_CONSTR_SOU"], 0.1, 0.5],
-      "line-color": "#fff",
+      "line-color": cSouterrainFiletInterieur,
       "line-width": autoroute.wFiletInt,
     },
   },

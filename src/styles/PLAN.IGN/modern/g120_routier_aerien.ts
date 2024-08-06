@@ -1,6 +1,8 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 import {
   autoroute,
+  cPisteCyclable,
+  escalier,
   routeLocale,
   routeNonClassee,
   routeNonClasseeRestreint,
@@ -24,7 +26,7 @@ export const g120_routier_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": ["interpolate", ["linear"], ["zoom"], 17, "#9B5CCC"],
+      "line-color": cPisteCyclable,
       "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1.1, 15, 1.7, 16, 2, 17, 3.5, 18, 6],
       "line-dasharray": [6, 2],
     },
@@ -42,8 +44,8 @@ export const g120_routier_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": ["interpolate", ["linear"], ["zoom"], 17, "#8C7274", 18, "#C8C8C8"],
-      "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1.75, 15, 3, 16, 4.2, 17, 9.5],
+      "line-color": escalier.cFiletExt,
+      "line-width": escalier.wFiletExt,
     },
   },
   {
@@ -59,8 +61,8 @@ export const g120_routier_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#FFFFFF",
-      "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 15, 1.9, 16, 2.7, 17, 5.8],
+      "line-color": escalier.cFiletInt,
+      "line-width": escalier.wFiletInt,
       "line-dasharray": [1, 0.2],
     },
   },

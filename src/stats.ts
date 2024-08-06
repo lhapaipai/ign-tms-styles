@@ -1,5 +1,5 @@
-import * as standardLayers from "./styles/PLAN.IGN/standard/index";
-import * as standardModernLayers from "./styles/PLAN.IGN/modern/index";
+import * as standardLayers from "./styles/PLAN.IGN/standard";
+import * as standardModernLayers from "./styles/PLAN.IGN/modern";
 
 let standardTotal = 0;
 let modernTotal = 0;

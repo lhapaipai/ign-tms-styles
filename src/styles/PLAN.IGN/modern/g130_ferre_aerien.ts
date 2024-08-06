@@ -1,4 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
+import { ferre } from "./vars";
 
 export const g130_ferre_aerien: LayerSpecification[] = [
   {
@@ -28,8 +29,8 @@ export const g130_ferre_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#787878",
-      "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.8, 17, 2.5],
+      "line-color": ferre.c,
+      "line-width": ferre.w,
     },
   },
   {
@@ -50,7 +51,7 @@ export const g130_ferre_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#787878",
+      "line-color": ferre.c,
       "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.3, 17, 1.8],
     },
   },
@@ -67,7 +68,7 @@ export const g130_ferre_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#787878",
+      "line-color": ferre.c,
       "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.3, 17, 1.8],
       "line-dasharray": [5, 2, 1, 2],
     },
@@ -83,7 +84,7 @@ export const g130_ferre_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#787878",
+      "line-color": ferre.c,
       "line-width": ["interpolate", ["linear"], ["zoom"], 10, 3.5, 17, 14.7],
       "line-dasharray": [0.1, 10],
     },

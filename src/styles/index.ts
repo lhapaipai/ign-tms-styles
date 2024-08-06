@@ -1,5 +1,5 @@
-import * as standardLayers from "./PLAN.IGN/standard/index";
-import * as standardModernLayers from "./PLAN.IGN/modern/index";
+import * as standardLayers from "./PLAN.IGN/standard";
+import * as standardModernLayers from "./PLAN.IGN/modern";
 
 const configs = {
   "PLAN.IGN/standard": {

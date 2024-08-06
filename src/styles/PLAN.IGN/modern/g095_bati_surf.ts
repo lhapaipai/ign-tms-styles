@@ -1,4 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
+import { bati } from "./vars";
 
 /**
  * ZAI : Zone d'activité ou d'intérêt
@@ -18,17 +19,17 @@ export const g095_bati_surf: LayerSpecification[] = [
         "match",
         ["get", "symbo"],
         ["MAIRIE", "MAIRIE_ANNEXE"],
-        "#fecaca", // red 200
+        bati.mairie.cFill,
         ["BATI_COMMERCIAL", "BATI_INDUSTRIEL", "HANGAR", "HANGAR_COMMERCIAL", "HANGAR_INDUSTRIEL"],
-        "#e2e8f0", // slate 200
+        bati.commerce.cFill,
         "BATI_SPORTIF",
-        "#a7f3d0", // emerald 200
+        bati.sportif.cFill,
         "BATI_GARE",
-        "#c7d2fe", // indigo 200
+        bati.gare.cFill,
         "PECHERIE_SURF",
-        "#bfdbfe", // blue 200
+        bati.pecherie.cFill,
         ["BATI_PUBLIC", "HANGAR_PUBLIC"],
-        "#fed7aa", // orange 200
+        bati.public.cFill,
         [
           "AUTRE_CULTE_SURF",
           "CHAPELLE_SURF",
@@ -38,31 +39,30 @@ export const g095_bati_surf: LayerSpecification[] = [
           "RELIGIEUX_QQUE",
           "SYNAGOGUE_SURF",
         ],
-        "#e9d5ff", // purple 200
+        bati.culte.cFill,
         ["ECLUSE_SURF", "RESERVOIR_EAU_SURF"],
-        "#ADCCD9",
+        bati.ecluse.cFill,
         "BARRAGE_SURF",
-        "#FFFFFF",
+        bati.barrage.cFill,
         "CHATEAU_EAU_SURF",
-        "#1466B2",
+        bati.traitementEau.cFill,
         "SILO_SURF",
-        "#C7A9AA",
+        bati.silo.cFill,
         "RESERVOIR_INDUS_SURF",
-        "#8D9DAA",
+        bati.reservoirIndustriel.cFill,
         "SERRE_SURF",
-        "#CAD6D9",
-
+        bati.serre.cFill,
         ["ARC_TRIOMPHE_SURF", "ARENE_THEATRE", "CHATEAU_SURF", "FORTIF_SURF", "MONUMENT_SURF", "TOUR_MOULIN_SURF"],
-        "#9b9b9b",
+        bati.monument.cFill,
         ["FOOT_SURF", "MULTI_SPORT_SURF", "NATATION_SURF", "PISTE_SPORT_SURF", "SPORT_INDIF_SURF", "TENNIS_SURF"],
-        "#ECFCCB", // lime 100
+        bati.sportifAutre.cFill,
         ["PISTE_DUR", "PISTE_HERBE"],
-        "#DBDBDB",
+        bati.piste.cFill,
         ["CIMETIERE_MILI_SURF", "CIMETIERE_SURF", "NECROPOLE_NATIONALE"],
-        "#F0F0F0",
+        bati.cimetiere.cFill,
         "POSTE_ELEC_SURF",
-        "#e1e5ec",
-        "#DDDDDD",
+        bati.posteElectrique.cFill,
+        bati.autre.cFill,
       ],
     },
   },
@@ -75,13 +75,7 @@ export const g095_bati_surf: LayerSpecification[] = [
     filter: ["==", ["get", "symbo"], "BATI_QQUE"],
     paint: {
       "fill-opacity": ["interpolate", ["linear"], ["zoom"], 14, 0, 15, 1],
-      "fill-color": [
-        "match",
-        ["get", "symbo"],
-        "BATI_QQUE",
-        "#e7e5e4", // stone 200
-        "#DDDDDD",
-      ],
+      "fill-color": ["match", ["get", "symbo"], "BATI_QQUE", bati.quelconque.cFill, bati.autre.cFill],
     },
   },
 
@@ -109,17 +103,17 @@ export const g095_bati_surf: LayerSpecification[] = [
         "match",
         ["get", "symbo"],
         ["MAIRIE", "MAIRIE_ANNEXE"],
-        "#f87171", // red 400
+        bati.mairie.cLine,
         ["BATI_COMMERCIAL", "BATI_INDUSTRIEL", "HANGAR", "HANGAR_COMMERCIAL", "HANGAR_INDUSTRIEL"],
-        "#94a3b8", // slate 400
+        bati.commerce.cLine,
         "BATI_SPORTIF",
-        "#34d399", // emerald 400
+        bati.sportif.cLine,
         "BATI_GARE",
-        "#818cf8", // indigo 400
+        bati.gare.cLine,
         "PECHERIE_SURF",
-        "#60a5fa", // blue 400
+        bati.pecherie.cLine,
         ["BATI_PUBLIC", "HANGAR_PUBLIC"],
-        "#fb923c", // orange 400
+        bati.public.cLine,
         [
           "AUTRE_CULTE_SURF",
           "CHAPELLE_SURF",
@@ -129,32 +123,31 @@ export const g095_bati_surf: LayerSpecification[] = [
           "RELIGIEUX_QQUE",
           "SYNAGOGUE_SURF",
         ],
-        "#c084fc", // purple 400
+        bati.culte.cLine,
         ["ECLUSE_SURF", "RESERVOIR_EAU_SURF"],
-        "#336699",
-
+        bati.ecluse.cLine,
         "BARRAGE_SURF",
-        "#464646",
+        bati.barrage.cLine,
         "CHATEAU_EAU_SURF",
-        "#115390",
+        bati.traitementEau.cLine,
         "SILO_SURF",
-        "#696969",
+        bati.silo.cLine,
         "RESERVOIR_INDUS_SURF",
-        "#464646",
+        bati.reservoirIndustriel.cLine,
         "SERRE_SURF",
-        "#8C8C8C",
+        bati.serre.cLine,
 
         ["ARC_TRIOMPHE_SURF", "ARENE_THEATRE", "CHATEAU_SURF", "FORTIF_SURF", "MONUMENT_SURF", "TOUR_MOULIN_SURF"],
-        "#6E6E6E",
+        bati.monument.cLine,
         ["FOOT_SURF", "MULTI_SPORT_SURF", "NATATION_SURF", "PISTE_SPORT_SURF", "SPORT_INDIF_SURF", "TENNIS_SURF"],
-        "#BEF264", // lime 300
+        bati.sportifAutre.cLine,
         ["PISTE_DUR", "PISTE_HERBE"],
-        "#808080",
+        bati.piste.cLine,
         ["CIMETIERE_MILI_SURF", "CIMETIERE_SURF", "NECROPOLE_NATIONALE"],
-        "#a8a29e", // stone 400
+        bati.cimetiere.cLine,
         "POSTE_ELEC_SURF",
-        "#000000",
-        "#B8B8B8",
+        bati.posteElectrique.cLine,
+        bati.autre.cLine,
       ],
     },
   },
@@ -168,93 +161,35 @@ export const g095_bati_surf: LayerSpecification[] = [
     paint: {
       "line-width": ["interpolate", ["linear"], ["zoom"], 15, 0.1, 16, 0.3, 19, 2],
       "line-opacity": ["interpolate", ["linear"], ["zoom"], 14, 0, 15, 1],
-      "line-color": [
-        "match",
-        ["get", "symbo"],
-        "BATI_QQUE",
-        "#a8a29e", // stone 400
-        "#B8B8B8",
-      ],
+      "line-color": ["match", ["get", "symbo"], "BATI_QQUE", bati.quelconque.cLine, bati.autre.cLine],
     },
   },
   /**
    * permet surtout de délimiter des zones qui contiennent des batiments zai
    */
   {
-    id: "bati ZAI - Autres",
+    id: "zones bati ZAI",
     type: "fill",
     source: "plan_ign",
     "source-layer": "bati_zai",
     minzoom: 15,
     maxzoom: 20,
-    filter: [
-      "match",
-      ["get", "nature"],
-      [
-        "Administration centrale de l'Etat",
-        "Autre service déconcentré de l'Etat",
-        "Autre établissement d'enseignement",
-        "Capitainerie",
-        "Caserne",
-        "Caserne de pompiers",
-        "Collège",
-        "Divers public ou administratif",
-        "Enseignement primaire",
-        "Enseignement supérieur",
-        "Etablissement extraterritorial",
-        "Etablissement hospitalier",
-        "Etablissement pénitentiaire",
-        "Etablissement thermal",
-        "Gendarmerie",
-        "Hôpital",
-        "Lycée",
-        "Maison de retraite",
-        "Maison du parc",
-        "Musée",
-        "Office de tourisme",
-        "Palais de justice",
-        "Piscine",
-        "Police",
-        "Poste",
-        "Science",
-        "Siège d'EPCI",
-        "Structure d'accueil pour personnes handicapées",
-        "Université",
-      ],
-      true,
-      false,
-    ],
     paint: {
-      "fill-color": "#ffedd5", // orange 100
-      "fill-opacity": 0.3,
-    },
-  },
-
-  {
-    id: "bati ZAI - Commandement",
-    type: "fill",
-    source: "plan_ign",
-    "source-layer": "bati_zai",
-    minzoom: 15,
-    filter: [
-      "match",
-      ["get", "nature"],
-      [
-        "Hôtel de collectivité",
-        "Hôtel de département",
-        "Hôtel de région",
-        "Préfecture",
-        "Préfecture de région",
-        "Sous-préfecture",
+      "fill-color": [
+        "match",
+        ["get", "nature"],
+        [
+          "Hôtel de collectivité",
+          "Hôtel de département",
+          "Hôtel de région",
+          "Préfecture",
+          "Préfecture de région",
+          "Sous-préfecture",
+        ],
+        bati.zai.cFillCommandement,
+        bati.zai.cFillDefaut,
       ],
-      true,
-      false,
-    ],
-    layout: { visibility: "visible" },
-    paint: {
-      "fill-color": "#FF0000",
       "fill-opacity": 0.3,
-      "fill-outline-color": "#B40000",
     },
   },
 ];

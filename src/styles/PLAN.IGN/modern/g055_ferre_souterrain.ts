@@ -1,4 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
+import { ferre } from "./vars";
 
 export const g055_ferre_souterrain: LayerSpecification[] = [
   {
@@ -14,8 +15,9 @@ export const g055_ferre_souterrain: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#eaeaea",
-      "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.8, 17, 2.5],
+      "line-opacity": 0.5,
+      "line-color": ferre.c,
+      "line-width": ferre.w,
     },
   },
   {
@@ -30,7 +32,8 @@ export const g055_ferre_souterrain: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#eaeaea",
+      "line-opacity": 0.5,
+      "line-color": ferre.c,
       "line-width": ["interpolate", ["linear"], ["zoom"], 10, 3.5, 17, 14.7],
       "line-dasharray": [0.1, 10],
     },

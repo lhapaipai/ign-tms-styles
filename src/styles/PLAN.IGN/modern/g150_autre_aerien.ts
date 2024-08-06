@@ -1,4 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
+import { aerien } from "./vars";
 
 export const g150_autre_aerien: LayerSpecification[] = [
   {
@@ -14,7 +15,7 @@ export const g150_autre_aerien: LayerSpecification[] = [
     minzoom: 12,
     maxzoom: 20,
     paint: {
-      "line-color": "#d6d3d1",
+      "line-color": aerien.cLigneElec,
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.5, 13, 1.5, 17, 2],
     },
   },
@@ -32,7 +33,7 @@ export const g150_autre_aerien: LayerSpecification[] = [
 
     paint: {
       "circle-radius": ["interpolate", ["linear"], ["zoom"], 13, 1.6, 17, 4],
-      "circle-color": "#57534e",
+      "circle-color": aerien.cPylone,
     },
   },
   {
@@ -63,7 +64,7 @@ export const g150_autre_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": ["interpolate", ["linear"], ["zoom"], 11, "#d6d3d1", 15, "#a8a29e"],
+      "line-color": aerien.cLigneAutre,
       "line-width": ["interpolate", ["linear"], ["zoom"], 11, 0.5, 13, 1.5, 17, 2],
     },
   },
@@ -79,9 +80,9 @@ export const g150_autre_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": ["interpolate", ["linear"], ["zoom"], 11, "#d6d3d1", 15, "#78716c"],
+      "line-color": aerien.cPylone,
       "line-width": 4,
-      "line-dasharray": [0.5, 10],
+      "line-dasharray": [0.75, 10],
     },
   },
 ];

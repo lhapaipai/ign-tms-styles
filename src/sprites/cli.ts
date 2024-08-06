@@ -1,7 +1,7 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineCommand, runMain } from "citty";
-import basicSprite from "./basic/index";
+import basicSprite from "./basic";
 import { buildSprite, BuildSpriteOptions } from "./build-sprite";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));

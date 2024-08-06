@@ -1,5 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { cHydro } from "./vars";
+import { bati, cHydro } from "./vars";
 
 // const metadata = [
 //   {
@@ -93,7 +93,6 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
       "icon-allow-overlap": true,
       "icon-rotate": ["get", "rotation"],
     },
-    paint: { "icon-color": "#969696" },
   },
   {
     id: "hydro ponctuel",
@@ -110,10 +109,10 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
     ],
     paint: {
       "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 7],
-      "circle-color": "#FFFFFF",
+      "circle-color": bati.cHydroInvert,
       "circle-opacity": 1,
       "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 14, 2, 17, 5],
-      "circle-stroke-color": "#1466B2",
+      "circle-stroke-color": bati.cHydro,
     },
   },
   {
@@ -153,7 +152,7 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
       "text-padding": 2,
       "text-font": ["Source Sans Pro Italic"],
     },
-    paint: { "text-color": "#505050" },
+    paint: { "text-color": bati.cPointCote },
   },
   /************************************************* */
 
@@ -166,10 +165,10 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
     filter: ["match", ["get", "symbo"], ["ABREUVOIR", "PUITS"], true, false],
     paint: {
       "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 7],
-      "circle-color": "#FFFFFF",
+      "circle-color": bati.cHydroInvert,
       "circle-opacity": 1,
       "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 14, 2, 17, 5],
-      "circle-stroke-color": "#1466B2",
+      "circle-stroke-color": bati.cHydro,
     },
   },
   {
@@ -180,7 +179,7 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
     filter: ["==", ["get", "symbo"], "CHATEAU_EAU_PONC"],
     paint: {
       "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 8],
-      "circle-color": "#1466B2",
+      "circle-color": bati.cHydro,
     },
   },
   {
@@ -195,7 +194,7 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
       "circle-color": cHydro.default,
       "circle-opacity": 1,
       "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 17, 2.5],
-      "circle-stroke-color": "#1466B2",
+      "circle-stroke-color": bati.cHydro,
     },
   },
   /**

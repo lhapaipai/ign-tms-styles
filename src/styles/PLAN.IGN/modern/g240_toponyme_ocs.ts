@@ -1,5 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { cNatureText, cToponyme, toponymeHalo } from "./vars";
+import { cToponyme, toponymeHalo } from "./vars";
 
 export const g240_toponyme_ocs: LayerSpecification[] = [
   {
@@ -55,7 +55,7 @@ export const g240_toponyme_ocs: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Italic"],
     },
     paint: {
-      "text-color": cNatureText,
+      "text-color": cToponyme.textLimiteParc,
       ...toponymeHalo,
     },
   },
@@ -86,7 +86,7 @@ export const g240_toponyme_ocs: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Italic"],
     },
     paint: {
-      "text-color": cNatureText,
+      "text-color": cToponyme.textLimiteParc,
       ...toponymeHalo,
     },
   },
@@ -106,7 +106,7 @@ export const g240_toponyme_ocs: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Italic"],
     },
     paint: {
-      "text-color": cNatureText,
+      "text-color": cToponyme.textLimiteParc,
       ...toponymeHalo,
     },
   },

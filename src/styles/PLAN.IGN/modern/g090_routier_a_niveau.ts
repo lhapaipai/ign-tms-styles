@@ -2,7 +2,9 @@ import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 import {
   autoroute,
   chemin,
+  cPisteCyclable,
   cToponyme,
+  escalier,
   pont,
   routeLocale,
   routeNonClassee,
@@ -14,76 +16,6 @@ import {
 } from "./vars";
 
 export const g090_routier_a_niveau: LayerSpecification[] = [
-  {
-    id: "Routier surfacique",
-    type: "fill",
-    source: "plan_ign",
-    "source-layer": "routier_surf",
-    minzoom: 13,
-    maxzoom: 20,
-
-    filter: [
-      "match",
-      ["get", "symbo"],
-      ["SURF_ROUT_LOC", "SURF_ROUT_NON_CLA", "SURF_ROUT_PRINC", "SURF_ROUT_REG", "DALLE_DE_PROTECTION"],
-      true,
-      false,
-    ],
-    paint: {
-      "fill-color": "#FFFFFF",
-      "fill-outline-color": "#000000",
-      "fill-opacity": ["match", ["get", "symbo"], "DALLE_DE_PROTECTION", 0.5, 1],
-    },
-  },
-  {
-    id: "Routier surfacique - Dalle de protection",
-    type: "fill",
-    source: "plan_ign",
-    "source-layer": "routier_surf",
-    maxzoom: 20,
-    filter: ["==", ["get", "symbo"], "DALLE_DE_PROTECTION"],
-    paint: {
-      "fill-opacity": 0.5,
-      "fill-color": "#FFFFFF",
-      "fill-outline-color": "#000000",
-    },
-  },
-
-  {
-    id: "Routier surfacique - Parking",
-    type: "fill",
-    source: "plan_ign",
-    "source-layer": "routier_surf",
-    maxzoom: 20,
-    filter: ["==", ["get", "symbo"], "PARKING_SURF"],
-    paint: {
-      "fill-color": "#f4f4f4",
-      "fill-pattern": ["step", ["zoom"], "blank", 15, "parking"],
-    },
-  },
-  {
-    id: "Routier surfacique - Escalier surfacique",
-    type: "fill",
-    source: "plan_ign",
-    "source-layer": "routier_surf",
-    maxzoom: 20,
-    filter: ["==", ["get", "symbo"], "ESCALIER_SURF"],
-    paint: {
-      "fill-opacity": 0.8,
-      "fill-color": "#FFFFFF",
-      "fill-outline-color": "#918091",
-    },
-  },
-  {
-    id: "Routier surfacique - Péage surfacique",
-    type: "fill",
-    source: "plan_ign",
-    "source-layer": "routier_surf",
-    maxzoom: 20,
-    filter: ["==", ["get", "symbo"], "SURF_PEAGE"],
-    paint: { "fill-color": "#F2DAAA", "fill-opacity": 0.7, "fill-outline-color": "#E2A52A" },
-  },
-
   {
     id: "routier ponctuel - peage ponctuel",
     type: "circle",
@@ -112,7 +44,7 @@ export const g090_routier_a_niveau: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#9B5CCC",
+      "line-color": cPisteCyclable,
       "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1.1, 15, 1.7, 16, 2, 17, 3.5, 18, 6],
       "line-dasharray": [6, 2],
     },
@@ -130,8 +62,8 @@ export const g090_routier_a_niveau: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#8C7274",
-      "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1.75, 15, 3, 16, 4.2, 17, 9.5],
+      "line-color": escalier.cFiletExt,
+      "line-width": escalier.wFiletExt,
     },
   },
   {
@@ -147,8 +79,8 @@ export const g090_routier_a_niveau: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#FFFFFF",
-      "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 15, 1.9, 16, 2.7, 17, 5.8],
+      "line-color": escalier.cFiletInt,
+      "line-width": escalier.wFiletInt,
       "line-dasharray": [1, 0.2],
     },
   },
@@ -185,6 +117,24 @@ export const g090_routier_a_niveau: LayerSpecification[] = [
     paint: {
       "line-color": chemin.c,
       "line-width": chemin.w,
+    },
+  },
+  {
+    id: "liaison routiere - Gue route / chemin",
+    type: "line",
+    source: "plan_ign",
+    "source-layer": "routier_liaison",
+    minzoom: 13,
+    maxzoom: 20,
+    filter: ["match", ["get", "symbo"], ["GUE_ROUTE", "GUE_CHEMIN"], true, false],
+    layout: {
+      "line-cap": "butt",
+      "line-join": "round",
+    },
+    paint: {
+      "line-color": chemin.c,
+      "line-width": chemin.w,
+      "line-dasharray": [1, 3],
     },
   },
   {
@@ -573,27 +523,11 @@ export const g090_routier_a_niveau: LayerSpecification[] = [
   },
 
   {
-    id: "liaison routiere - Gue route / chemin",
-    type: "line",
-    source: "plan_ign",
-    "source-layer": "routier_liaison",
-    minzoom: 13,
-    maxzoom: 20,
-    filter: ["match", ["get", "symbo"], ["GUE_ROUTE", "GUE_CHEMIN"], true, false],
-    layout: {
-      "line-cap": "butt",
-      "line-join": "round",
-    },
-    paint: {
-      "line-color": ["interpolate", ["linear"], ["zoom"], 13, "#BEBEBE", 17, "#646464"],
-      "line-width": ["interpolate", ["linear"], ["zoom"], 14, 2, 16, 5, 17, 10],
-    },
-  },
-
-  {
     id: "liaison routiere - filet extérieur - Pont passerelle",
     type: "line",
     source: "plan_ign",
+    minzoom: 13,
+    maxzoom: 20,
     "source-layer": "routier_liaison",
     filter: ["match", ["get", "symbo"], ["PONT_LIN", "PONT_MOBILE_LIN", "PONT_PASSERELLE"], true, false],
     layout: {
@@ -601,7 +535,7 @@ export const g090_routier_a_niveau: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#C8C8C8",
+      "line-color": pont.cFiletExt,
       "line-width": pont.wFiletExt,
     },
   },
@@ -610,6 +544,7 @@ export const g090_routier_a_niveau: LayerSpecification[] = [
     type: "line",
     source: "plan_ign",
     "source-layer": "routier_liaison",
+    minzoom: 13,
     maxzoom: 20,
     filter: ["match", ["get", "symbo"], ["PONT_LIN", "PONT_MOBILE_LIN", "PONT_PASSERELLE"], true, false],
     layout: {
@@ -617,7 +552,7 @@ export const g090_routier_a_niveau: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#FFFFFF",
+      "line-color": pont.cFiletInt,
       "line-width": pont.wFiletInt,
     },
   },

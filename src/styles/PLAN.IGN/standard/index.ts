@@ -2,6 +2,7 @@ export * from "./g010_oro";
 export * from "./g020_ocs";
 export * from "./g030_oro";
 export * from "./g040_hydro_surf";
+export * from "./g042_routier_surf";
 export * from "./g055_ferre_souterrain";
 export * from "./g051_routier_souterrain";
 export * from "./g045_hydro_lineaire";

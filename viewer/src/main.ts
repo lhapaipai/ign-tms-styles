@@ -35,7 +35,12 @@ new window.maplibregl.Compare(beforeMap, afterMap, "#comparison-container");
 
 layersControl.addConfig(beforeMap, beforeStyleDir);
 layersControl.addConfig(afterMap, afterStyleDir);
-layersControl.addFilter("routes", ["g051_routier_souterrain", "g090_routier_a_niveau", "g120_routier_aerien"]);
+layersControl.addFilter("routes", [
+  "g042_routier_surf",
+  "g051_routier_souterrain",
+  "g090_routier_a_niveau",
+  "g120_routier_aerien",
+]);
 layersControl.addFilter("toponymes", [
   "g200_toponyme_bati",
   "g210_toponyme_hydro",

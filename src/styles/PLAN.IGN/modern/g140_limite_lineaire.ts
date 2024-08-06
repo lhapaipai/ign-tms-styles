@@ -1,4 +1,5 @@
 import { LayerSpecification, LineLayerSpecification } from "@maplibre/maplibre-gl-style-spec";
+import { limite } from "./vars";
 
 const bandeauLayout: LineLayerSpecification["layout"] = {
   "line-cap": "round",
@@ -8,10 +9,6 @@ const tiretLayout: LineLayerSpecification["layout"] = {
   "line-cap": "butt",
   "line-join": "round",
 };
-
-const cTiretMonde = "#605780";
-const cTiret = "#9f9cb8";
-const cBandeau = "#f1f1f6";
 
 export const g140_limite_lineaire: LayerSpecification[] = [
   {
@@ -28,7 +25,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     ],
     layout: tiretLayout,
     paint: {
-      "line-color": "#E5997A",
+      "line-color": limite.militaire,
       "line-width": ["interpolate", ["linear"], ["zoom"], 13, 1.7, 17, 3.1],
       "line-dasharray": [4, 1, 2, 5],
     },
@@ -41,7 +38,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     filter: ["==", ["get", "symbo"], "CLOTURE"],
     layout: tiretLayout,
     paint: {
-      "line-color": "#000000",
+      "line-color": limite.cloture,
       "line-width": ["interpolate", ["linear"], ["zoom"], 13, 0.6, 17, 1],
       "line-dasharray": [1.5, 4],
     },
@@ -59,7 +56,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": "#B3989A",
+      "line-color": limite.layon,
       "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 15, 1.2, 16, 1.4, 17, 2],
       "line-dasharray": [4, 7],
     },
@@ -81,7 +78,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     ],
     layout: tiretLayout,
     paint: {
-      "line-color": "#FFC2CB",
+      "line-color": limite.zoneNaturelle,
       "line-width": ["interpolate", ["linear"], ["zoom"], 13, 2, 17, 4],
       "line-dasharray": [2, 1],
     },
@@ -96,7 +93,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     filter: ["match", ["get", "symbo"], ["LIM_PARC_NATUREL", "LIM_PARC_NATUREL_ILE"], true, false],
     layout: tiretLayout,
     paint: {
-      "line-color": "#42A266",
+      "line-color": limite.parcNaturel,
       "line-width": ["interpolate", ["linear"], ["zoom"], 13, 2, 17, 4],
       "line-dasharray": [2, 1],
     },
@@ -112,7 +109,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     filter: ["==", ["get", "symbo"], "LIM_PARC_NATUREL_MARIN"],
     layout: tiretLayout,
     paint: {
-      "line-color": "#2A81A2",
+      "line-color": limite.parcMarin,
       "line-width": ["interpolate", ["linear"], ["zoom"], 13, 2, 17, 4],
       "line-dasharray": [2, 1],
     },
@@ -127,7 +124,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     filter: ["match", ["get", "symbo"], ["LIM_ARRONDISSEMENT", "LIM_CANTON", "LIM_COMMUNE"], true, false],
     paint: {
       "line-opacity": ["interpolate", ["linear"], ["zoom"], 12, 0, 13, 1],
-      "line-color": cTiret,
+      "line-color": limite.admin[1],
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 2, 15, 2],
       "line-dasharray": [0, 1.5],
     },
@@ -147,7 +144,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     layout: bandeauLayout,
     paint: {
       "line-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 9, 1],
-      "line-color": cBandeau,
+      "line-color": limite.bandeau,
       "line-width": ["interpolate", ["linear"], ["zoom"], 7, 5, 15, 10],
     },
   },
@@ -162,7 +159,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     layout: tiretLayout,
     paint: {
       "line-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 9, 1],
-      "line-color": cTiret,
+      "line-color": limite.admin[1],
       "line-width": ["interpolate", ["linear"], ["zoom"], 9, 1.5, 15, 4],
       "line-dasharray": [1, 1],
     },
@@ -178,7 +175,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     layout: bandeauLayout,
     paint: {
       "line-opacity": ["interpolate", ["linear"], ["zoom"], 7, 0, 8, 1],
-      "line-color": cBandeau,
+      "line-color": limite.bandeau,
       "line-width": ["interpolate", ["linear"], ["zoom"], 7, 5, 15, 10],
     },
   },
@@ -193,7 +190,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     layout: tiretLayout,
     paint: {
       "line-opacity": ["interpolate", ["linear"], ["zoom"], 7, 0, 8, 1],
-      "line-color": cTiret,
+      "line-color": limite.admin[1],
       "line-width": ["interpolate", ["linear"], ["zoom"], 9, 1.5, 15, 4],
       "line-dasharray": ["step", ["zoom"], ["literal", [1, 1]], 7, ["literal", [3, 1]]],
     },
@@ -208,7 +205,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     filter: ["match", ["get", "symbo"], ["LIM_ETAT", "LIM_ETAT_ETRANGER"], true, false],
     layout: bandeauLayout,
     paint: {
-      "line-color": cBandeau,
+      "line-color": limite.bandeau,
       "line-width": ["interpolate", ["linear"], ["zoom"], 5, 2, 7, 5, 15, 10],
     },
   },
@@ -221,7 +218,7 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     filter: ["match", ["get", "symbo"], ["LIM_ETAT", "LIM_ETAT_ETRANGER"], true, false],
     layout: tiretLayout,
     paint: {
-      "line-color": ["interpolate", ["linear"], ["zoom"], 2, cTiretMonde, 8, cTiret],
+      "line-color": ["interpolate", ["linear"], ["zoom"], 2, limite.admin[0], 8, limite.admin[1]],
       "line-width": ["interpolate", ["linear"], ["zoom"], 4, 0.5, 5, 1, 9, 1.5, 15, 4],
       "line-dasharray": ["step", ["zoom"], ["literal", [1]], 7, ["literal", [5, 1, 1, 1]]],
     },
@@ -236,6 +233,6 @@ export const g140_limite_lineaire: LayerSpecification[] = [
     maxzoom: 10,
     filter: ["match", ["get", "symbo"], ["LIM_COTE"], true, false],
     layout: bandeauLayout,
-    paint: { "line-color": "#82A3B2", "line-width": 1 },
+    paint: { "line-color": limite.cote, "line-width": 1 },
   },
 ];

@@ -1,11 +1,5 @@
 import { CircleLayerSpecification, DataDrivenPropertyValueSpecification, SymbolLayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const pont = {
-  wFiletExt: ["interpolate", ["linear"], ["zoom"], 9, 4, 14, 7.5, 16, 20, 17, 34],
-  wFiletInt: ["interpolate", ["linear"], ["zoom"], 9, 3, 14, 6.5, 16, 13, 17, 24],
-} satisfies {
-  [key: string]: DataDrivenPropertyValueSpecification<string>;
-};
 
 /**
  * Important: la REGIONALE_4 n'existe que pour les zooms inférieurs à 7
@@ -20,9 +14,9 @@ export const pont = {
 
 /**                              z3         z7         z9         z11        z13        z15          z17*/
 export const cAutorouteExt =  [             "#DE460E",                                               "#F18800"];
-export const cAutorouteInt =  [  "#fff",    "#F18800",                                               "#F2B230"];
+export const cAutorouteInt =  [  "#ffffff", "#F18800",                                               "#F2B230"];
 export const cPrincipaleExt =               "#E2A52A"                                                          ;
-export const cPrincipaleInt = [  "#fff",    "#F3C66D",                                               "#F2DDB3"];
+export const cPrincipaleInt = [  "#ffffff", "#F3C66D",                                               "#F2DDB3"];
 export const cRegionaleExt =                           "#B4B4B4"                                               ;
 export const cRegionaleInt =  [                        "#FDF28B",                                    "#FCF6BD"];
 export const cLocaleExt =     [                        "#8C8C8C", "#B4B4B4"                                   ];
@@ -31,12 +25,48 @@ export const cAutreExt =                                                     "#9
 export const cAutreInt =                                                     "#ffffff"                         ;
 export const cNonRevetueExt = [                                   "#646464",                         "#8c8c8c"];
 export const cNontRevetueInt =                                    "#ffffff"                                    ;
-export const cSentier =       [                                              "#a68e91", "#8c7274"             ];
+export const cPisteCyclable =                                                "#9b5ccc";
+/**
+ * chemin est plus large que sentier
+ * sentier = sentier rando ou rue piétonne
+ */
 export const cChemin =        [                                              "#bcaaac", "#8c7274"             ];
+export const cSentier =       [                                              "#a68e91", "#8c7274"             ];
+
+export const routeSurface = {
+  cParking: "#f0f0f0",
+  cDefaut: "#f0f0f0",
+  cOut: "#ddd",
+}
+
+export const pont = {
+  cFiletExt: "#c8c8c8",
+  cFiletInt: "#ffffff",
+  wFiletExt: ["interpolate", ["linear"], ["zoom"], 9, 4, 14, 7.5, 16, 20, 17, 34],
+  wFiletInt: ["interpolate", ["linear"], ["zoom"], 9, 3, 14, 6.5, 16, 13, 17, 24],
+} satisfies {
+  [key: string]: DataDrivenPropertyValueSpecification<string>;
+};
+
+export const ferre = {
+  c: "#787878",
+  w: ["interpolate", ["linear"], ["zoom"], 10, 0.8, 17, 2.5]
+} satisfies {
+  [key: string]: DataDrivenPropertyValueSpecification<string>;
+};
+
+/**
+ * pour les routes souterraines qui ont un filet intérieur et extérieur
+ * le résultat est meilleur en utilisant une couleur très claire comme #ffffff avec une
+ * opacité de .5
+ * qu'un cXXXInt avec opacité de .5 car la couleur du filet intérieur va foncir la couleur
+ * finale
+ */
+export const cSouterrainFiletInterieur = "#ffffff";
+export const cAutorouteAxeCentral = "#ffffff";
+export const cEscalierFiletInterieur = "#ffffff";
 
 
-
-export const cNatureText = "#287B00";
 
 export const cOroText = "#863831";
 export const cOroMassifText = "#e18f88";
@@ -103,6 +133,148 @@ export const cHydro = {
   eauTemporaire: "#d4e5ee"
 }
 
+export const bati = {
+  // zones (pas associée à un batiments à proprement parler)
+  zai: {
+    // surface qui englobe les batiments publics
+
+    // ex: collège, Hôpital, Musée, Police
+    cFillDefaut: "#ffedd5", // orange 100
+
+    // ex: préfecture, Hôtel de région
+    cFillCommandement: "#FF0000"
+  },
+  aeroport: {
+    cText: "#4b5563"
+  },
+  // bati surfacique
+  mairie: {
+    cFill: "#fecaca", // red 200
+    cLine: "#f87171", // red 400
+  },
+  commerce: {
+    cFill: "#e2e8f0", // slate 200
+    cLine: "#94a3b8", // slate 400
+  },
+  sportif: {
+    cFill: "#a7f3d0", // emerald 200
+    cLine: "#34d399", // emerald 400
+  },
+  sportifAutre: {
+    // "FOOT_SURF", "MULTI_SPORT_SURF", "NATATION_SURF", "PISTE_SPORT_SURF", "SPORT_INDIF_SURF", "TENNIS_SURF"
+    cFill: "#ECFCCB", // lime 100
+    cLine: "#BEF264", // lime 300
+  },
+  gare: {
+    cFill: "#c7d2fe", // indigo 200
+    cLine: "#818cf8", // indigo 400
+    cText: "#4338CA", // indigo 700
+  },
+  pecherie: {
+    cFill: "#bfdbfe", // blue 200
+    cLine: "#60a5fa", // blue 400
+  },
+  public: {
+    cFill: "#fed7aa", // orange 200
+    cLine: "#fb923c", // orange 400
+    cText:  "#9a3412", // orange 800
+  },
+  culte: {
+    cFill: "#e9d5ff", // purple 200
+    cLine: "#c084fc", // purple 400
+    cText:  "#7e22ce", // purple 700
+  },
+  ecluse: {
+    cFill: "#ADCCD9",
+    cLine: "#336699",
+  },
+  barrage: {
+    cFill: "#FFFFFF",
+    cLine: "#464646",
+  },
+  traitementEau: {
+    cFill: "#1466B2",
+    cLine: "#115390",
+    cText: "#447fb3",
+  },
+  silo: {
+    cFill: "#C7A9AA",
+    cLine: "#696969",
+  },
+  reservoirIndustriel: {
+    cFill: "#8D9DAA",
+    cLine: "#464646",
+  },
+  serre: {
+    cFill: "#CAD6D9",
+    cLine: "#8C8C8C",
+  },
+  monument: {
+    cFill: "#9b9b9b",
+    cLine: "#6E6E6E",
+    cText: "#1F2937",
+  },
+  piste: {
+    cFill: "#DBDBDB",
+    cLine: "#808080",
+  },
+  cimetiere: {
+    cFill: "#F0F0F0",
+    cLine: "#a8a29e", // stone 400
+  },
+  posteElectrique: {
+    cFill: "#e1e5ec",
+    cLine: "#000000",
+  },
+  quelconque: {
+    cFill: "#e7e5e4", // stone 200
+    cLine: "#a8a29e", // stone 400
+  },
+  autre: {
+    cFill: "#dddddd",
+    cLine: "#B8B8B8",
+  },
+
+
+  // bati linéaire
+  cBarrage: "#e7e5e4",
+  cMur: "#a8a29e",
+
+  // bati ponctuel
+  cHydro: "#1466b2",
+  cHydroInvert: "#ffffff", // en fonction du batiment cela peut être le filet intérieur ou extérieur
+  cPointCote: "#505050"
+}
+
+export const limite = {
+  /**     z2         z8         */
+  admin: ["#605780", "#9f9cb8"],
+  bandeau: "#f1f1f6",
+
+  militaire: "#e5997a",
+  cloture: "#000000",
+  layon: "#b3989a",
+  zoneNaturelle: "#FFC2CB",
+  parcNaturel: "#42a266",
+  parcMarin: "#2a81a2",
+  cote: "#82a3b2",
+}
+
+export const aerien = {
+  /**
+   * différent de cLigneAutre pour rester discret
+   * on met plus en valeur cLigneAutre car peut-être associé à remontée mécanique.
+   */
+  cLigneElec: "#d6d3d1",
+  cLigneAutre: ["interpolate", ["linear"], ["zoom"], 11, "#d6d3d1", 15, "#a8a29e"],
+  /**
+   * les pylones des remontées mécaniques sont accessibles dès le zoom 11
+   * ceux des lignes électriques à partir du zoom 13.
+   */
+  cPylone: ["interpolate", ["linear"], ["zoom"], 13, "#78716c", 15, "#57534e"],
+} satisfies {
+  [key: string]: DataDrivenPropertyValueSpecification<string>;
+};
 
 export const toponymeHaloColor = "#fff";
 
@@ -116,7 +288,8 @@ export const cToponyme = {
   textLimiteMilitaire: "#0d2000",
   textLimiteMarin: "#2a81a2",
   textMarinPrincipal: "#fff",
-  textHydro: "#5792C2"
+  textHydro: "#5792C2",
+  textBornePostale: "#79654f"
 }
 
 export const toponymeHalo: SymbolLayerSpecification["paint"] = {
@@ -145,7 +318,7 @@ export const autoroute = {
 
   cFiletInt: ["interpolate", ["linear"], ["zoom"], 5, cAutorouteInt[0], 7, cAutorouteInt[1], 17, cAutorouteInt[2]],
   wFiletIntBretelle: ["interpolate", ["linear"], ["zoom"], 12, 1.5, 14, 2.6, 15, 5.2, 16, 6.7, 17, 10.8],
-  cAxeCentral: "#FFF",
+  cAxeCentral: cAutorouteAxeCentral,
   wAxeCentral: ["interpolate", ["linear"], ["zoom"], 9, 0.6, 14, 0.7, 15, 1, 16, 1.2, 17, 2.1],
 } satisfies {
   [key: string]: DataDrivenPropertyValueSpecification<string>;
@@ -227,6 +400,14 @@ export const routeNonRevetue = {
   [key: string]: DataDrivenPropertyValueSpecification<string>;
 };
 
+export const chemin = {
+  c: ["interpolate", ["linear"], ["zoom"], 13, cChemin[0], 15, cChemin[1]],
+  w: ["interpolate", ["linear"], ["zoom"], 14, 1.5, 17, 3, 18, 7],
+} satisfies {
+  [key: string]: DataDrivenPropertyValueSpecification<string>;
+};
+
+
 export const sentier = {
   c: ["interpolate", ["linear"], ["zoom"], 13, cSentier[0], 15, cSentier[1]],
   w: ["interpolate", ["linear"], ["zoom"], 14, 1, 17, 2, 18, 6],
@@ -234,9 +415,15 @@ export const sentier = {
   [key: string]: DataDrivenPropertyValueSpecification<string>;
 };
 
-export const chemin = {
-  c: ["interpolate", ["linear"], ["zoom"], 13, cChemin[0], 15, cChemin[1]],
-  w: ["interpolate", ["linear"], ["zoom"], 14, 1.5, 17, 3, 18, 7],
+export const escalier = {
+  /**
+   * prolongement de rue piétonne
+   */
+  cFiletExt: sentier.c,
+  cFiletInt: cEscalierFiletInterieur,
+  wFiletExt: ["interpolate", ["linear"], ["zoom"], 14, 1.75, 15, 3, 16, 4.2, 17, 9.5],
+  wFiletInt: ["interpolate", ["linear"], ["zoom"], 14, 1, 15, 1.9, 16, 2.7, 17, 5.8]
 } satisfies {
   [key: string]: DataDrivenPropertyValueSpecification<string>;
 };
+
