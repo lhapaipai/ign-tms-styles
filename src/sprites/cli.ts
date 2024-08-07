@@ -1,7 +1,10 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineCommand, runMain } from "citty";
-import basicSprite from "./basic";
+
+import basicSprite from "./models/basic";
+import basicDarkSprite from "./models/basic-dark";
+
 import { buildSprite, BuildSpriteOptions } from "./build-sprite";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
@@ -30,7 +33,7 @@ const main = defineCommand({
     },
   },
   async run({ args: { icons, ...rest } }) {
-    const sprites = [basicSprite];
+    const sprites = [basicSprite, basicDarkSprite];
 
     const options: BuildSpriteOptions = {
       ...rest,

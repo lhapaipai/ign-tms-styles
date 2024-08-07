@@ -21,7 +21,7 @@ export async function buildSprite(
 ) {
   const manifest: Manifest = {};
 
-  const iconsDir = resolve(scriptDir, `${name}/icons`);
+  const iconsDir = resolve(scriptDir, `icons`);
 
   const sprite = await sharp({
     create: {

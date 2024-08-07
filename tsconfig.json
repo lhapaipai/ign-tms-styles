@@ -9,7 +9,6 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "types": ["node"],
     "skipLibCheck": true,
-
     "allowSyntheticDefaultImports": true,
 
     /* Bundler mode */

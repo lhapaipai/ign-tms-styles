@@ -22,7 +22,8 @@ Pour le choix entre `Layer`, `style`
 .
 └── PLAN.IGN
     ├── standard
-    └── modern
+    ├── modern
+    └── modern-dark
 ```
 
 ## Exemple
@@ -69,3 +70,7 @@ pnpm tsx src/sprites/cli.ts --icons parking --icons phare
 # pour regénérer toutes les icones et le sprite
 pnpm tsx src/sprites/cli.ts --force
 ```
+
+## Développeurs
+
+ne pas toucher aux fichiers gXXX du dossier modern-dark il s'agit de liens physiques vers le dossier modern.
