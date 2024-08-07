@@ -1,64 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   viewBox="0 0 32 32"
-   height="32"
-   width="32"
-   version="1.1"
-   id="svg4"
-   sodipodi:docname="station-eau.svg"
-   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
-   inkscape:export-filename="station-eau.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <defs
-     id="defs4" />
-  <sodipodi:namedview
-     id="namedview4"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showguides="true"
-     inkscape:zoom="23.515152"
-     inkscape:cx="16.5"
-     inkscape:cy="16.5"
-     inkscape:window-width="1920"
-     inkscape:window-height="1022"
-     inkscape:window-x="1920"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg4">
-    <sodipodi:guide
-       position="3.9974227,25.706186"
-       orientation="1,0"
-       id="guide4"
-       inkscape:locked="false" />
+<svg viewBox="0 0 32 32" height="32" width="32" version="1.1" id="svg4" sodipodi:docname="station-eau.svg" inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)" inkscape:export-filename="station-eau.png" inkscape:export-xdpi="96" inkscape:export-ydpi="96"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs id="defs4" />
+  <sodipodi:namedview id="namedview4" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showguides="true" inkscape:zoom="23.515152" inkscape:cx="16.5" inkscape:cy="16.5" inkscape:window-width="1920" inkscape:window-height="1022" inkscape:window-x="1920" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="svg4">
+    <sodipodi:guide position="3.9974227,25.706186" orientation="1,0" id="guide4" inkscape:locked="false" />
   </sodipodi:namedview>
-  <title
-     id="title1">triangle.svg</title>
-  <rect
-     style="fill:#1466b2;fill-opacity:1;stroke:none;stroke-width:0.144726;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke markers fill"
-     id="rect1"
-     width="14.134553"
-     height="14.134553"
-     x="8.932724"
-     y="8.932724"
-     ry="1.0196003" />
-  <metadata
-     id="metadata4">
+  <title id="title1">triangle.svg</title>
+  <rect style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.144726;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke markers fill" id="rect1" width="14.134553" height="14.134553" x="8.932724" y="8.932724" ry="1.0196003" />
+  <metadata id="metadata4">
     <rdf:RDF>
-      <cc:Work
-         rdf:about="">
+      <cc:Work rdf:about="">
         <dc:title>triangle.svg</dc:title>
       </cc:Work>
     </rdf:RDF>

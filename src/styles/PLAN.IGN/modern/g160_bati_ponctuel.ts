@@ -1,5 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { bati, cHydro } from "./vars";
+import { bati, cHydro, cOroCourbe } from "./vars";
 
 // const metadata = [
 //   {
@@ -79,6 +79,11 @@ import { bati, cHydro } from "./vars";
  * le barrage qui a un minzoom/maxzoom: 12/14
  *
  */
+/**
+ * lorsque les zooms sont plus élevés le bati_ponc est remplacé par un bati_surf
+ * il est important d'être cohérent avec le passage de couleurs
+ */
+
 export const g160_bati_ponctuel: LayerSpecification[] = [
   {
     id: "routier ponctuel - barriere",
@@ -92,38 +97,6 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
       "icon-size": ["interpolate", ["linear"], ["zoom"], 14, 0.5, 16, 1],
       "icon-allow-overlap": true,
       "icon-rotate": ["get", "rotation"],
-    },
-  },
-  {
-    id: "hydro ponctuel",
-    type: "circle",
-    source: "plan_ign",
-    "source-layer": "hydro_ponc",
-    minzoom: 13,
-    filter: [
-      "match",
-      ["get", "symbo"],
-      ["AUTRE_HYDRO_PONC", "CASCADE", "PERTE", "POINT_D_EAU", "RESURGENCE", "SOURCE", "SOURCE_CAPTEE"],
-      true,
-      false,
-    ],
-    paint: {
-      "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 7],
-      "circle-color": bati.cHydroInvert,
-      "circle-opacity": 1,
-      "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 14, 2, 17, 5],
-      "circle-stroke-color": bati.cHydro,
-    },
-  },
-  {
-    id: "hydro ponctuel avec image",
-    type: "symbol",
-    source: "plan_ign",
-    "source-layer": "hydro_ponc",
-    minzoom: 14,
-    filter: ["match", ["get", "symbo"], ["FONTAINE"], true, false],
-    layout: {
-      "icon-image": "fontaine",
     },
   },
   {
@@ -152,36 +125,42 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
       "text-padding": 2,
       "text-font": ["Source Sans Pro Italic"],
     },
-    paint: { "text-color": bati.cPointCote },
+    paint: { "text-color": cOroCourbe.sol.text },
+  },
+  {
+    id: "hydro ponctuel",
+    type: "circle",
+    source: "plan_ign",
+    "source-layer": "hydro_ponc",
+    minzoom: 13,
+    filter: [
+      "match",
+      ["get", "symbo"],
+      ["AUTRE_HYDRO_PONC", "CASCADE", "PERTE", "POINT_D_EAU", "RESURGENCE", "SOURCE", "SOURCE_CAPTEE"],
+      true,
+      false,
+    ],
+    paint: {
+      "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 7],
+      "circle-color": cHydro.default[0],
+      "circle-opacity": 1,
+      "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 17, 3],
+      "circle-stroke-color": cHydro.default[1],
+    },
+  },
+  {
+    id: "hydro ponctuel avec image",
+    type: "symbol",
+    source: "plan_ign",
+    "source-layer": "hydro_ponc",
+    minzoom: 14,
+    filter: ["match", ["get", "symbo"], ["FONTAINE"], true, false],
+    layout: {
+      "icon-image": "fontaine",
+    },
   },
   /************************************************* */
 
-  {
-    id: "bati Puits-Abreuvoir",
-    type: "circle",
-    source: "plan_ign",
-    "source-layer": "bati_ponc",
-    minzoom: 13,
-    filter: ["match", ["get", "symbo"], ["ABREUVOIR", "PUITS"], true, false],
-    paint: {
-      "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 7],
-      "circle-color": bati.cHydroInvert,
-      "circle-opacity": 1,
-      "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 14, 2, 17, 5],
-      "circle-stroke-color": bati.cHydro,
-    },
-  },
-  {
-    id: "bati Chateau d'eau",
-    type: "circle",
-    source: "plan_ign",
-    "source-layer": "bati_ponc",
-    filter: ["==", ["get", "symbo"], "CHATEAU_EAU_PONC"],
-    paint: {
-      "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 8],
-      "circle-color": bati.cHydro,
-    },
-  },
   {
     id: "bati Réservoir d'eau",
     type: "circle",
@@ -191,10 +170,37 @@ export const g160_bati_ponctuel: LayerSpecification[] = [
     filter: ["==", ["get", "symbo"], "RESERVOIR_EAU_PONC"],
     paint: {
       "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 8],
-      "circle-color": cHydro.default,
-      "circle-opacity": 1,
+      "circle-color": bati.hydro.cFill,
       "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 17, 2.5],
-      "circle-stroke-color": bati.cHydro,
+      "circle-stroke-color": bati.hydro.cLine,
+    },
+  },
+  {
+    id: "bati Puits-Abreuvoir",
+    type: "circle",
+    source: "plan_ign",
+    "source-layer": "bati_ponc",
+    minzoom: 13,
+    filter: ["match", ["get", "symbo"], ["ABREUVOIR", "PUITS"], true, false],
+    paint: {
+      "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 7],
+      "circle-color": bati.hydro.cFill,
+      "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 14, 2, 17, 5],
+      "circle-stroke-color": bati.hydro.cLine,
+    },
+  },
+  {
+    id: "bati Chateau d'eau",
+    type: "circle",
+    source: "plan_ign",
+    "source-layer": "bati_ponc",
+    filter: ["==", ["get", "symbo"], "CHATEAU_EAU_PONC"],
+    paint: {
+      "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 9],
+      "circle-color": bati.hydro.cFill,
+      "circle-opacity": 1,
+      "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 14, 3, 17, 7.5],
+      "circle-stroke-color": bati.hydro.cLine,
     },
   },
   /**

@@ -71,7 +71,7 @@ export const g200_toponyme_bati: LayerSpecification[] = [
         ["AEROPORT", "AEROGARE", "AERODROME"],
         bati.aeroport.cText,
         ["USINE_PRODUCTION_EAU", "STATION_EPURATION", "STATION_DE_POMPAGE"],
-        bati.traitementEau.cText,
+        bati.hydro.cText,
         ["CHATEAU_FORT", "CHATEAU"],
         bati.monument.cText,
         "ZAI",

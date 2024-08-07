@@ -1,5 +1,14 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { cAutorouteExt, cHydro, toponymeHalo, cToponyme } from "./vars";
+import {
+  cAutorouteExt,
+  cHydro,
+  toponymeHalo,
+  cToponyme,
+  toponymeRoutierHalo,
+  autoroute,
+  routePrincipale,
+  routeRegionale,
+} from "./vars";
 
 export const g260_toponyme_routier_ferre: LayerSpecification[] = [
   {
@@ -18,7 +27,7 @@ export const g260_toponyme_routier_ferre: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },
@@ -38,9 +47,9 @@ export const g260_toponyme_routier_ferre: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Italic"],
     },
     paint: {
-      "text-color": cToponyme.textHydro,
+      "text-color": cHydro.text,
       "text-halo-width": 5,
-      "text-halo-color": cHydro.default,
+      "text-halo-color": cHydro.default[0],
     },
   },
   {
@@ -66,9 +75,8 @@ export const g260_toponyme_routier_ferre: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cToponyme.textRoute,
-      "text-halo-width": 2,
-      "text-halo-color": cToponyme.halo,
+      ...toponymeRoutierHalo,
+      "text-color": routeRegionale.cText,
     },
   },
   {
@@ -90,9 +98,8 @@ export const g260_toponyme_routier_ferre: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cToponyme.textRoute,
-      "text-halo-width": 2,
-      "text-halo-color": cToponyme.halo,
+      ...toponymeRoutierHalo,
+      "text-color": routePrincipale.cText,
     },
   },
   {
@@ -114,9 +121,8 @@ export const g260_toponyme_routier_ferre: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cAutorouteExt[0],
-      "text-halo-width": 2,
-      "text-halo-color": cToponyme.halo,
+      ...toponymeRoutierHalo,
+      "text-color": autoroute.cText,
     },
   },
   /**
@@ -138,7 +144,7 @@ export const g260_toponyme_routier_ferre: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },
@@ -158,7 +164,7 @@ export const g260_toponyme_routier_ferre: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },

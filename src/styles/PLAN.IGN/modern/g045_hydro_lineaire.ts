@@ -20,7 +20,7 @@ export const g045_hydro_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1.4, 16, 3.5, 17, 5.9],
       "line-dasharray": [2, 2],
     },
@@ -38,7 +38,7 @@ export const g045_hydro_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 3.5, 16, 8.7, 17, 14.7],
       "line-dasharray": [1, 5],
     },
@@ -54,7 +54,7 @@ export const g045_hydro_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1.5, 17, 4],
       "line-dasharray": [6, 2],
     },
@@ -71,7 +71,7 @@ export const g045_hydro_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 7, 1.5, 12, 1.5, 17, 6.5],
     },
   },
@@ -86,7 +86,7 @@ export const g045_hydro_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1.4, 17, 5.9],
     },
   },
@@ -102,7 +102,7 @@ export const g045_hydro_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 3.5, 16, 8.7, 17, 14.7],
       "line-dasharray": [1, 5],
     },
@@ -118,7 +118,7 @@ export const g045_hydro_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 7, 2, 12, 2.5],
     },
   },
@@ -133,7 +133,7 @@ export const g045_hydro_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 7, 3, 11, 5],
     },
   },
@@ -150,7 +150,7 @@ export const g045_hydro_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       /**
        * il doit y avoir presque correspondance de zoom au niveau 7 avec COURS_D_EAU_LAR
        * comme COURS_D_EAU_LAR se tortille on a l'impression qu'il est moins large

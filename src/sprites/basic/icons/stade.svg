@@ -1,66 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   viewBox="0 0 32 32"
-   height="32"
-   width="32"
-   version="1.1"
-   id="svg4"
-   sodipodi:docname="stade.svg"
-   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
-   inkscape:export-filename="stade.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <defs
-     id="defs4" />
-  <sodipodi:namedview
-     id="namedview4"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showguides="true"
-     inkscape:zoom="11.757576"
-     inkscape:cx="8.0798969"
-     inkscape:cy="13.863402"
-     inkscape:window-width="1920"
-     inkscape:window-height="1022"
-     inkscape:window-x="1920"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg4">
-    <sodipodi:guide
-       position="3.9974227,26.195876"
-       orientation="1,0"
-       id="guide4"
-       inkscape:locked="false" />
+<svg viewBox="0 0 32 32" height="32" width="32" version="1.1" id="svg4" sodipodi:docname="stade.svg" inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)" inkscape:export-filename="stade.png" inkscape:export-xdpi="96" inkscape:export-ydpi="96"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs id="defs4" />
+  <sodipodi:namedview id="namedview4" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showguides="true" inkscape:zoom="11.757576" inkscape:cx="8.0798969" inkscape:cy="13.863402" inkscape:window-width="1920" inkscape:window-height="1022" inkscape:window-x="1920" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="svg4">
+    <sodipodi:guide position="3.9974227,26.195876" orientation="1,0" id="guide4" inkscape:locked="false" />
   </sodipodi:namedview>
-  <title
-     id="title1">stadium.svg</title>
-  <path
-     fill="#000000"
-     d="m 14.927598,3.0067594 v 4.2896086 3.217208 1.093421 C 8.8567285,11.808395 4.2080802,13.658931 4.2035761,15.875586 v 9.65162 c 0,2.36915 5.281366,4.289609 11.7964239,4.289609 6.515058,0 11.796424,-1.920459 11.796424,-4.289609 v -9.65162 c -0.0045,-2.216655 -4.653153,-4.067191 -10.724022,-4.268589 V 9.5752226 L 23.506815,6.7601669 Z M 6.3483804,18.334605 c 1.1041453,0.572877 2.5767678,1.038728 4.2896086,1.357232 v 6.363205 C 8.0530709,25.477875 6.3483804,24.497485 6.3483804,23.382401 Z m 19.3032386,0.004 v 5.043722 c 0,1.115084 -1.70469,2.095474 -4.289608,2.672641 v -6.35913 c 1.712841,-0.318289 3.185464,-0.784355 4.289608,-1.357233 z m -12.868826,1.659007 c 1.046022,0.109595 2.128719,0.165794 3.217207,0.167509 1.088059,-2.15e-4 2.170757,-0.05512 3.217207,-0.163434 v 6.400991 C 18.20636,26.522396 17.134172,26.599608 16,26.599608 c -1.134172,0 -2.20636,-0.07722 -3.217207,-0.196893 z"
-     id="path5"
-     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4.245;stroke-dasharray:none;stroke-opacity:1" />
-  <path
-     fill="#000000"
-     d="m 14.927598,3.0067594 v 4.2896086 3.217208 1.093421 C 8.8567285,11.808395 4.2080802,13.658931 4.2035761,15.875586 v 9.65162 c 0,2.36915 5.281366,4.289609 11.7964239,4.289609 6.515058,0 11.796424,-1.920459 11.796424,-4.289609 v -9.65162 c -0.0045,-2.216655 -4.653153,-4.067191 -10.724022,-4.268589 V 9.5752226 L 23.506815,6.7601669 Z M 6.3483804,18.334605 c 1.1041453,0.572877 2.5767678,1.038728 4.2896086,1.357232 v 6.363205 C 8.0530709,25.477875 6.3483804,24.497485 6.3483804,23.382401 Z m 19.3032386,0.004 v 5.043722 c 0,1.115084 -1.70469,2.095474 -4.289608,2.672641 v -6.35913 c 1.712841,-0.318289 3.185464,-0.784355 4.289608,-1.357233 z m -12.868826,1.659007 c 1.046022,0.109595 2.128719,0.165794 3.217207,0.167509 1.088059,-2.15e-4 2.170757,-0.05512 3.217207,-0.163434 v 6.400991 C 18.20636,26.522396 17.134172,26.599608 16,26.599608 c -1.134172,0 -2.20636,-0.07722 -3.217207,-0.196893 z"
-     id="path4"
-     style="fill:#1f2937;fill-opacity:1;stroke-width:2.1448" />
-  <metadata
-     id="metadata4">
+  <title id="title1">stadium.svg</title>
+  <path fill="#000000" d="m 14.927598,3.0067594 v 4.2896086 3.217208 1.093421 C 8.8567285,11.808395 4.2080802,13.658931 4.2035761,15.875586 v 9.65162 c 0,2.36915 5.281366,4.289609 11.7964239,4.289609 6.515058,0 11.796424,-1.920459 11.796424,-4.289609 v -9.65162 c -0.0045,-2.216655 -4.653153,-4.067191 -10.724022,-4.268589 V 9.5752226 L 23.506815,6.7601669 Z M 6.3483804,18.334605 c 1.1041453,0.572877 2.5767678,1.038728 4.2896086,1.357232 v 6.363205 C 8.0530709,25.477875 6.3483804,24.497485 6.3483804,23.382401 Z m 19.3032386,0.004 v 5.043722 c 0,1.115084 -1.70469,2.095474 -4.289608,2.672641 v -6.35913 c 1.712841,-0.318289 3.185464,-0.784355 4.289608,-1.357233 z m -12.868826,1.659007 c 1.046022,0.109595 2.128719,0.165794 3.217207,0.167509 1.088059,-2.15e-4 2.170757,-0.05512 3.217207,-0.163434 v 6.400991 C 18.20636,26.522396 17.134172,26.599608 16,26.599608 c -1.134172,0 -2.20636,-0.07722 -3.217207,-0.196893 z" id="path5" style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4.245;stroke-dasharray:none;stroke-opacity:1" />
+  <path fill="#000000" d="m 14.927598,3.0067594 v 4.2896086 3.217208 1.093421 C 8.8567285,11.808395 4.2080802,13.658931 4.2035761,15.875586 v 9.65162 c 0,2.36915 5.281366,4.289609 11.7964239,4.289609 6.515058,0 11.796424,-1.920459 11.796424,-4.289609 v -9.65162 c -0.0045,-2.216655 -4.653153,-4.067191 -10.724022,-4.268589 V 9.5752226 L 23.506815,6.7601669 Z M 6.3483804,18.334605 c 1.1041453,0.572877 2.5767678,1.038728 4.2896086,1.357232 v 6.363205 C 8.0530709,25.477875 6.3483804,24.497485 6.3483804,23.382401 Z m 19.3032386,0.004 v 5.043722 c 0,1.115084 -1.70469,2.095474 -4.289608,2.672641 v -6.35913 c 1.712841,-0.318289 3.185464,-0.784355 4.289608,-1.357233 z m -12.868826,1.659007 c 1.046022,0.109595 2.128719,0.165794 3.217207,0.167509 1.088059,-2.15e-4 2.170757,-0.05512 3.217207,-0.163434 v 6.400991 C 18.20636,26.522396 17.134172,26.599608 16,26.599608 c -1.134172,0 -2.20636,-0.07722 -3.217207,-0.196893 z" id="path4" style="fill:#000000;fill-opacity:1;stroke-width:2.1448" />
+  <metadata id="metadata4">
     <rdf:RDF>
-      <cc:Work
-         rdf:about="">
+      <cc:Work rdf:about="">
         <dc:title>stadium.svg</dc:title>
       </cc:Work>
     </rdf:RDF>

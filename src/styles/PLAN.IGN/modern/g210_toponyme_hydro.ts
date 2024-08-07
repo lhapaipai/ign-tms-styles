@@ -1,5 +1,5 @@
 import { DataDrivenPropertyValueSpecification, LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { cToponyme, toponymeHydroPaint } from "./vars";
+import { cHydro, cToponyme, toponymeHydroHalo } from "./vars";
 
 const importantLineaire = [
   "OCEAN_MER",
@@ -39,7 +39,10 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-padding": 10,
       "text-font": ["Source Sans Pro Regular"],
     },
-    paint: toponymeHydroPaint,
+    paint: {
+      ...toponymeHydroHalo,
+      "text-color": cHydro.text,
+    },
   },
   {
     id: "toponyme - hydro lineaire secondaire",
@@ -54,7 +57,10 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-padding": 10,
       "text-font": ["Source Sans Pro Regular"],
     },
-    paint: toponymeHydroPaint,
+    paint: {
+      ...toponymeHydroHalo,
+      "text-color": cHydro.text,
+    },
   },
   {
     id: "toponyme - hydro ponc ocean",
@@ -75,7 +81,7 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cToponyme.textMarinPrincipal,
+      "text-color": cHydro.textOcean,
     },
   },
   {
@@ -108,7 +114,10 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-padding": 10,
       "text-font": ["Source Sans Pro Regular"],
     },
-    paint: toponymeHydroPaint,
+    paint: {
+      ...toponymeHydroHalo,
+      "text-color": cHydro.text,
+    },
   },
   {
     id: "toponyme - hydro ponc secondaire",
@@ -145,7 +154,10 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-padding": 10,
       "text-font": ["Source Sans Pro Regular"],
     },
-    paint: toponymeHydroPaint,
+    paint: {
+      ...toponymeHydroHalo,
+      "text-color": cHydro.text,
+    },
   },
   {
     id: "toponyme - hydro ponc tertiaire",
@@ -166,6 +178,9 @@ export const g210_toponyme_hydro: LayerSpecification[] = [
       "text-padding": 5,
       "text-font": ["Source Sans Pro Regular"],
     },
-    paint: toponymeHydroPaint,
+    paint: {
+      ...toponymeHydroHalo,
+      "text-color": cHydro.text,
+    },
   },
 ];

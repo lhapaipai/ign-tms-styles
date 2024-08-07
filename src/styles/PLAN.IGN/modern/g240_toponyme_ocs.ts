@@ -28,7 +28,7 @@ export const g240_toponyme_ocs: LayerSpecification[] = [
       "text-allow-overlap": true,
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },

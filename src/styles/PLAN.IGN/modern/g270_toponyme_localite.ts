@@ -71,7 +71,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Italic"],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 15, cToponyme.textDefaultFadeIn, 17, cToponyme.textDefault],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 15, cToponyme.defaultFadeIn, 17, cToponyme.default],
       ...toponymeHalo,
     },
   },
@@ -93,7 +93,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 14, cToponyme.textDefaultFadeIn, 16, cToponyme.textDefault],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 14, cToponyme.defaultFadeIn, 16, cToponyme.default],
       ...toponymeHalo,
     },
   },
@@ -114,7 +114,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 14, cToponyme.textDefaultFadeIn, 16, cToponyme.textDefault],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 14, cToponyme.defaultFadeIn, 16, cToponyme.default],
       ...toponymeHalo,
     },
   },
@@ -136,7 +136,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
     },
     paint: {
       ...toponymeHalo,
-      "text-color": ["interpolate", ["linear"], ["zoom"], 13, cToponyme.textDefaultFadeIn, 15, cToponyme.textDefault],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 13, cToponyme.defaultFadeIn, 15, cToponyme.default],
     },
   },
   {
@@ -156,7 +156,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },
@@ -178,7 +178,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },
@@ -200,7 +200,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Semibold"],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },
@@ -221,7 +221,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Semibold"],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },
@@ -243,7 +243,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Bold"],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },
@@ -358,7 +358,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 11, cToponyme.textDefaultFadeIn, 12, cToponyme.textDefault],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 11, cToponyme.defaultFadeIn, 12, cToponyme.default],
 
       ...toponymeHalo,
     },
@@ -414,7 +414,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
     },
     paint: {
       // "text-color": "green",
-      "text-color": ["interpolate", ["linear"], ["zoom"], 11, cToponyme.textDefaultFadeIn, 12, cToponyme.textDefault],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 11, cToponyme.defaultFadeIn, 12, cToponyme.default],
       ...toponymeHalo,
     },
   },
@@ -439,7 +439,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 7, cToponyme.textDefaultFadeIn, 9, cToponyme.textDefault],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 7, cToponyme.defaultFadeIn, 9, cToponyme.default],
       ...toponymeHalo,
     },
   },
@@ -473,7 +473,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       ],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 6, cToponyme.textDefaultFadeIn, 8, cToponyme.textDefault],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 6, cToponyme.defaultFadeIn, 8, cToponyme.default],
       ...toponymeHalo,
     },
   },
@@ -511,7 +511,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       ],
     },
     paint: {
-      "text-color": ["interpolate", ["linear"], ["zoom"], 5, cToponyme.textDefaultFadeIn, 7, cToponyme.textDefault],
+      "text-color": ["interpolate", ["linear"], ["zoom"], 5, cToponyme.defaultFadeIn, 7, cToponyme.default],
       ...toponymeHalo,
     },
   },
@@ -555,7 +555,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       ],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },
@@ -590,7 +590,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Semibold"],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },
@@ -612,7 +612,7 @@ export const g270_toponyme_localite: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Semibold"],
     },
     paint: {
-      "text-color": cToponyme.textDefault,
+      "text-color": cToponyme.default,
       ...toponymeHalo,
     },
   },

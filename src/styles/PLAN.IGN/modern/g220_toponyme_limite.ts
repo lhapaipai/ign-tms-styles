@@ -1,5 +1,5 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { cText, cToponyme, toponymeHalo } from "./vars";
+import { cText, limite, toponymeHalo } from "./vars";
 
 export const g220_toponyme_limite: LayerSpecification[] = [
   {
@@ -27,11 +27,11 @@ export const g220_toponyme_limite: LayerSpecification[] = [
         "match",
         ["get", "txt_typo"],
         ["LIM_PARC_1", "LIM_PARC_2", "PARC_1", "PARC_2", "LIM_PARC_3", "LIM_PARC_4", "RESERVE_NATURELLE_PONC"],
-        cToponyme.textLimiteParc,
+        limite.parcNaturel.cText,
         ["LIM_MILI_1", "LIM_MILI_2", "LIM_MILI_3", "LIM_MILI_4"],
-        cToponyme.textLimiteMilitaire,
+        limite.militaire.cText,
         ["PARC_MARIN_1", "PARC_MARIN_2"],
-        cToponyme.textLimiteMarin,
+        limite.parcMarin.cText,
         cText,
       ],
       ...toponymeHalo,

@@ -23,7 +23,7 @@ export const g170_routier_borne: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cToponyme.textBornePostale,
+      "text-color": cToponyme.bornePostale,
       ...toponymeHalo,
     },
   },
@@ -45,7 +45,7 @@ export const g170_routier_borne: LayerSpecification[] = [
       "text-font": ["Source Sans Pro Regular"],
     },
     paint: {
-      "text-color": cToponyme.textBornePostale,
+      "text-color": cToponyme.bornePostale,
       ...toponymeHalo,
     },
   },

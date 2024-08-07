@@ -107,31 +107,40 @@ export const cOroCourbe = {
  * essayer de faire correspondre hypso200[1] avec cOcsVegetation.foret
  */
 export const cOcsVegetation = {
-  foret:        "#dfe8d5" /* zoom faible -> toutes les forêts, zoom fort -> forêts mixe uniquement */,
-  foretConi:    "#c7d4b9",
-  foretFeuil:   "#e6edd8",
-  foretOuverte: "#EDF2D9",
-  peupleraie:   "#DFE8D5",
-  landeLigneuse:"#F2EECD",
-  vigne:        "#FFEDD9",
-  verger:       "#FAEDFA",
-  canneBanane:  "#FAEDFA",
-  estran:       "#C3DDE9",
-  mangrove:     "#85CCCB",
+  foret:           ["#dfe8d5", "#b1bfa3"], /* zoom faible -> toutes les forêts, zoom fort -> forêts mixe uniquement */
+  foretConi:       ["#c7d4b9", "#a1af8e"],
+  foretFeuil:      ["#e6edd8", "#bcc1a6"],
+  foretOuverte:     "#EDF2D9",
+  peupleraie:       "#DFE8D5",
+  landeLigneuse:   ["#F2EECD", "#93b685"],
+  vigne:            "#FFEDD9",
+  verger:           "#FAEDFA",
+  canneBanane:      "#FAEDFA",
+  estran:           "#C3DDE9",
+  mangrove:         "#85CCCB",
+  sable:           ["#fefefe", "#da8e4c"],
+  sableHumide:     ["#f6f6f6", "#54aace"],
+  marais:          ["#d6e6d3", "#a4bfa0"],
+  maraisSalant:    ["#ecf5f4", "#d6e4e3"],
+  graviers:        ["#e5e5e5", "#b3b3b3"],
+  graviersHumides: ["#e4f0f6", "#8aa2a9"],
+  rocherHydro:     ["#d7e8f4", "#b0d5e8"]
 };
-
-
 
 export const cOcsBati = {
   indusActi: "#D9D9D9",
 };
 
 export const cHydro = {
-  default:       "#aad5e9",
+  default:       ["#aad5e9", "#1466b2"],
   estran:        "#c3dde9",
   marais:        "#d6e6d3",
-  eauTemporaire: "#d4e5ee"
+  eauTemporaire: "#d4e5ee",
+  
+  text:          "#5792C2",
+  textOcean:     "#ffffff",
 }
+
 
 export const bati = {
   // zones (pas associée à un batiments à proprement parler)
@@ -159,20 +168,18 @@ export const bati = {
   sportif: {
     cFill: "#a7f3d0", // emerald 200
     cLine: "#34d399", // emerald 400
+    cText: "#047857", // emerald 700
   },
   sportifAutre: {
     // "FOOT_SURF", "MULTI_SPORT_SURF", "NATATION_SURF", "PISTE_SPORT_SURF", "SPORT_INDIF_SURF", "TENNIS_SURF"
     cFill: "#ECFCCB", // lime 100
     cLine: "#BEF264", // lime 300
+    cText: "#4d7c0f", // lime 700
   },
   gare: {
     cFill: "#c7d2fe", // indigo 200
     cLine: "#818cf8", // indigo 400
     cText: "#4338CA", // indigo 700
-  },
-  pecherie: {
-    cFill: "#bfdbfe", // blue 200
-    cLine: "#60a5fa", // blue 400
   },
   public: {
     cFill: "#fed7aa", // orange 200
@@ -184,19 +191,34 @@ export const bati = {
     cLine: "#c084fc", // purple 400
     cText:  "#7e22ce", // purple 700
   },
+  pecherie: {
+    cFill: "#bfdbfe", // blue 200
+    cLine: "#60a5fa", // blue 400
+  },
   ecluse: {
     cFill: "#ADCCD9",
-    cLine: "#336699",
+    cLine: cHydro.default[1],
   },
   barrage: {
     cFill: "#FFFFFF",
     cLine: "#464646",
   },
-  traitementEau: {
-    cFill: "#1466B2",
-    cLine: "#115390",
-    cText: "#447fb3",
+  hydro: {
+    /**
+     * batiment lié à l'eau mais l'eau en elle-même
+     * n'est pas accessible
+     * puits, abreuvoir
+     */
+    cFill: "#ffffff",
+    cLine: cHydro.default[1],
+    /**
+     * différent de cHydro.text
+     * le texte du batiment doit être contrasté
+     */
+    cText: cHydro.default[1],
   },
+
+
   silo: {
     cFill: "#C7A9AA",
     cLine: "#696969",
@@ -210,9 +232,9 @@ export const bati = {
     cLine: "#8C8C8C",
   },
   monument: {
-    cFill: "#9b9b9b",
-    cLine: "#6E6E6E",
-    cText: "#1F2937",
+    cFill: "#fbcfe8", // pink 200
+    cLine: "#f472b6", // pink 400
+    cText: "#be185d", // pink 700
   },
   piste: {
     cFill: "#DBDBDB",
@@ -229,35 +251,43 @@ export const bati = {
   quelconque: {
     cFill: "#e7e5e4", // stone 200
     cLine: "#a8a29e", // stone 400
+    cText: "#78716c", // stone 500
   },
   autre: {
-    cFill: "#dddddd",
-    cLine: "#B8B8B8",
+    cFill: "#e7e5e4", // stone 200
+    cLine: "#a8a29e", // stone 400
+    cText: "#44403c", // stone 700
   },
-
-
-  // bati linéaire
-  cBarrage: "#e7e5e4",
-  cMur: "#a8a29e",
-
-  // bati ponctuel
-  cHydro: "#1466b2",
-  cHydroInvert: "#ffffff", // en fonction du batiment cela peut être le filet intérieur ou extérieur
-  cPointCote: "#505050"
+  refuge: {
+    cText: "#246138"
+  },
+  hopital: {
+    cText: "#bf0000"
+  },
 }
 
 export const limite = {
-  /**     z2         z8         */
-  admin: ["#605780", "#9f9cb8"],
   bandeau: "#f1f1f6",
-
-  militaire: "#e5997a",
-  cloture: "#000000",
+  admin: {
+    /**     z2         z8         */
+    cLine: ["#605780", "#9f9cb8"]
+  },
+  militaire: {
+    cLine: "#e5997a",
+    cText: "#0d2000"
+  },
+  parcNaturel: {
+    cLine: "#42a266",
+    cText: "#287b00"
+  },
+  parcMarin: {
+    cLine: "#2a81a2",
+    cText: "#2a81a2"
+  },
   layon: "#b3989a",
   zoneNaturelle: "#FFC2CB",
-  parcNaturel: "#42a266",
-  parcMarin: "#2a81a2",
   cote: "#82a3b2",
+  cloture: "#000000",
 }
 
 export const aerien = {
@@ -276,30 +306,25 @@ export const aerien = {
   [key: string]: DataDrivenPropertyValueSpecification<string>;
 };
 
-export const toponymeHaloColor = "#fff";
-
 export const cToponyme = {
-  halo: "#fff",
-  haloHydro: "rgba(255, 255, 255, .75)",
-  textDefaultFadeIn: "#444",
-  textDefault: "#000",
-  textRoute: cAutorouteInt[1],
-  textLimiteParc: "#287b00",
-  textLimiteMilitaire: "#0d2000",
-  textLimiteMarin: "#2a81a2",
-  textMarinPrincipal: "#fff",
-  textHydro: "#5792C2",
-  textBornePostale: "#79654f"
+  defaultFadeIn: "#444",
+  default: "#000",
+  bornePostale: "#79654f",
 }
 
+
 export const toponymeHalo: SymbolLayerSpecification["paint"] = {
-  "text-halo-color": cToponyme.halo,
+  "text-halo-color": "#fff",
   "text-halo-width": 1,
 };
 
-export const toponymeHydroPaint: SymbolLayerSpecification["paint"] = {
-  "text-color": cToponyme.textHydro,
-  "text-halo-color": cToponyme.haloHydro,
+export const toponymeRoutierHalo: SymbolLayerSpecification["paint"] = {
+  "text-halo-color": "#fff",
+  "text-halo-width": 2,
+};
+
+export const toponymeHydroHalo: SymbolLayerSpecification["paint"] = {
+  "text-halo-color": "rgba(255, 255, 255, .75)",
   "text-halo-width": 2,
 };
 
@@ -310,6 +335,8 @@ export const circleDefaultPaint: CircleLayerSpecification["paint"] = {
 };
 
 export const autoroute = {
+  cText: cAutorouteExt[0],
+
   cFiletExt: ["interpolate", ["linear"], ["zoom"], 7, cAutorouteExt[0], 17, cAutorouteExt[1]],
   wFiletExtBretelle: ["interpolate", ["linear"], ["zoom"], 12, 2.5, 14, 3.7, 15, 6.8, 16, 8.4, 17, 14],
 
@@ -325,6 +352,8 @@ export const autoroute = {
 };
 
 export const routePrincipale = {
+  cText: cPrincipaleExt,
+
   cFiletExt: cPrincipaleExt,
   wFiletExt: ["interpolate", ["linear"], ["zoom"], 9, 2.7, 14, 6, 16, 12, 17, 22],
   cFiletInt: ["interpolate", ["linear"], ["zoom"], 5, cPrincipaleInt[0], 7, cPrincipaleInt[1], 17, cPrincipaleInt[2]],
@@ -334,6 +363,10 @@ export const routePrincipale = {
 };
 
 export const routeRegionale = {
+  /**
+   * cRegionaleInt[0] est illisible
+   */
+  cText: cPrincipaleExt,
   /**
    * Les régionales ne sont censées apparaitre qu'au zoom 8, à l'exception de la REGIONALE_4
    * qui n'existe qu'aux zooms 1 à 7, c'est une PRINCIPALE peu empruntée, qui doit avoir un filet

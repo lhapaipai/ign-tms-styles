@@ -14,7 +14,7 @@ export const g110_hydro_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1.5, 17, 6.5],
     },
   },
@@ -30,7 +30,7 @@ export const g110_hydro_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1.4, 17, 5.9],
     },
   },
@@ -46,7 +46,7 @@ export const g110_hydro_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1.4, 16, 3.5, 17, 5.9],
     },
   },
@@ -62,7 +62,7 @@ export const g110_hydro_aerien: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": cHydro.default,
+      "line-color": cHydro.default[0],
       "line-width": ["interpolate", ["linear"], ["zoom"], 12, 3.5, 16, 8.7, 17, 14.7],
       "line-dasharray": [1, 5],
     },

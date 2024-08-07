@@ -1,3 +1,5 @@
+import { bati, cOcsVegetation } from "../../styles/PLAN.IGN/modern/vars";
+
 const sprite: Sprite = {
   name: "basic",
   width: 512,
@@ -10,6 +12,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "foret-coni.svg",
+      searchAndReplace: [
+        ["#cccccc", cOcsVegetation.foretConi[0]],
+        ["#000000", cOcsVegetation.foretConi[1]],
+      ],
     },
     "foret-feuil": {
       x: 128,
@@ -18,6 +24,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "foret-feuil.svg",
+      searchAndReplace: [
+        ["#cccccc", cOcsVegetation.foretFeuil[0]],
+        ["#000000", cOcsVegetation.foretFeuil[1]],
+      ],
     },
     "foret-mixte": {
       x: 256,
@@ -26,6 +36,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "foret-mixte.svg",
+      searchAndReplace: [
+        ["#cccccc", cOcsVegetation.foret[0]],
+        ["#000000", cOcsVegetation.foret[1]],
+      ],
     },
     "lande-ligneuse": {
       x: 384,
@@ -34,6 +48,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "lande-ligneuse.svg",
+      searchAndReplace: [
+        ["#cccccc", cOcsVegetation.landeLigneuse[0]],
+        ["#000000", cOcsVegetation.landeLigneuse[1]],
+      ],
     },
     sable: {
       x: 0,
@@ -42,6 +60,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "sable.svg",
+      searchAndReplace: [
+        ["#000000", cOcsVegetation.sable[1]],
+        ["#cccccc", cOcsVegetation.sable[0]],
+      ],
     },
     "sable-humide": {
       x: 128,
@@ -50,6 +72,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "sable-humide.svg",
+      searchAndReplace: [
+        ["#000000", cOcsVegetation.sableHumide[1]],
+        ["#cccccc", cOcsVegetation.sableHumide[0]],
+      ],
     },
     marais: {
       x: 256,
@@ -58,6 +84,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "marais.svg",
+      searchAndReplace: [
+        ["#000000", cOcsVegetation.marais[1]],
+        ["#cccccc", cOcsVegetation.marais[0]],
+      ],
     },
     "marais-salant": {
       x: 384,
@@ -66,6 +96,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "marais-salant.svg",
+      searchAndReplace: [
+        ["#000000", cOcsVegetation.maraisSalant[1]],
+        ["#cccccc", cOcsVegetation.maraisSalant[0]],
+      ],
     },
     graviers: {
       x: 0,
@@ -74,6 +108,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "graviers.svg",
+      searchAndReplace: [
+        ["#000000", cOcsVegetation.graviers[1]],
+        ["#cccccc", cOcsVegetation.graviers[0]],
+      ],
     },
     "graviers-humides": {
       x: 128,
@@ -82,6 +120,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "graviers-humides.svg",
+      searchAndReplace: [
+        ["#000000", cOcsVegetation.graviersHumides[1]],
+        ["#cccccc", cOcsVegetation.graviersHumides[0]],
+      ],
     },
 
     "rocher-hydro": {
@@ -91,6 +133,10 @@ const sprite: Sprite = {
       height: 128,
       pixelRatio: 2,
       src: "rocher-hydro.svg",
+      searchAndReplace: [
+        ["#000000", cOcsVegetation.rocherHydro[1]],
+        ["#cccccc", cOcsVegetation.rocherHydro[0]],
+      ],
     },
     train: {
       x: 0,
@@ -99,6 +145,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "train.svg",
+      searchAndReplace: [["#000000", bati.gare.cText]],
     },
     culte: {
       x: 32,
@@ -107,6 +154,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "culte.svg",
+      searchAndReplace: [["#000000", bati.culte.cText]],
     },
     aeroport: {
       x: 64,
@@ -115,6 +163,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "aeroport.svg",
+      searchAndReplace: [["#000000", bati.aeroport.cText]],
     },
     chateau: {
       x: 96,
@@ -123,6 +172,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "chateau.svg",
+      searchAndReplace: [["#000000", bati.monument.cText]],
     },
     "station-epuration": {
       x: 128,
@@ -131,6 +181,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "station-epuration.svg",
+      searchAndReplace: [["#000000", bati.hydro.cText]],
     },
     "station-pompage": {
       x: 160,
@@ -139,6 +190,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "station-pompage.svg",
+      searchAndReplace: [["#000000", bati.hydro.cText]],
     },
     stade: {
       x: 192,
@@ -147,6 +199,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "stade.svg",
+      searchAndReplace: [["#000000", bati.sportifAutre.cText]],
     },
 
     fontaine: {
@@ -156,6 +209,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "fontaine.svg",
+      searchAndReplace: [["#000000", bati.hydro.cText]],
     },
     abri: {
       x: 0,
@@ -164,6 +218,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "abri.svg",
+      searchAndReplace: [["#000000", bati.refuge.cText]],
     },
     question: {
       x: 32,
@@ -172,6 +227,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "question.svg",
+      searchAndReplace: [["#000000", bati.quelconque.cText]],
     },
 
     barrage: {
@@ -181,6 +237,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "barrage.svg",
+      searchAndReplace: [["#000000", bati.hydro.cText]],
     },
     eolienne: {
       x: 96,
@@ -189,6 +246,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "eolienne.svg",
+      searchAndReplace: [["#000000", bati.autre.cText]],
     },
     feu: {
       x: 128,
@@ -197,6 +255,10 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "feu.svg",
+      searchAndReplace: [
+        ["#000000", bati.quelconque.cText],
+        ["#ffffff", "#ffffff"],
+      ],
     },
     hopital: {
       x: 160,
@@ -205,6 +267,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "hopital.svg",
+      searchAndReplace: [["#000000", bati.hopital.cText]],
     },
     metro: {
       x: 192,
@@ -213,6 +276,10 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "metro.svg",
+      searchAndReplace: [
+        ["#000000", bati.gare.cText],
+        ["#ffffff", "#ffffff"],
+      ],
     },
     parking: {
       x: 224,
@@ -221,7 +288,10 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "parking.svg",
-      searchAndReplace: [["#000000", "#aaaaaa"]],
+      searchAndReplace: [
+        ["#000000", bati.quelconque.cText],
+        ["#e6e6e6", bati.quelconque.cFill],
+      ],
     },
     ecluse: {
       x: 0,
@@ -230,6 +300,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "ecluse.svg",
+      searchAndReplace: [["#000000", bati.hydro.cText]],
     },
     "refuge-garde": {
       x: 32,
@@ -238,6 +309,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "refuge-garde.svg",
+      searchAndReplace: [["#000000", bati.refuge.cText]],
     },
     "refuge-non-garde": {
       x: 64,
@@ -246,6 +318,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "refuge-non-garde.svg",
+      searchAndReplace: [["#000000", bati.refuge.cText]],
     },
     "religion-chretienne": {
       x: 96,
@@ -254,6 +327,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "religion-chretienne.svg",
+      searchAndReplace: [["#000000", bati.culte.cText]],
     },
     "religion-juive": {
       x: 128,
@@ -262,6 +336,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "religion-juive.svg",
+      searchAndReplace: [["#000000", bati.culte.cText]],
     },
     "religion-musulmane": {
       x: 160,
@@ -270,6 +345,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "religion-musulmane.svg",
+      searchAndReplace: [["#000000", bati.culte.cText]],
     },
     silo: {
       x: 192,
@@ -278,6 +354,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "silo.svg",
+      searchAndReplace: [["#000000", bati.quelconque.cText]],
     },
     reservoir: {
       x: 224,
@@ -286,6 +363,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "reservoir.svg",
+      searchAndReplace: [["#000000", bati.quelconque.cText]],
     },
     "construction-speciale": {
       x: 0,
@@ -294,6 +372,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "construction-speciale.svg",
+      searchAndReplace: [["#000000", bati.quelconque.cText]],
     },
     croix: {
       x: 32,
@@ -302,6 +381,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "croix.svg",
+      searchAndReplace: [["#000000", bati.culte.cText]],
     },
     chapelle: {
       x: 64,
@@ -310,6 +390,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "chapelle.svg",
+      searchAndReplace: [["#000000", bati.culte.cText]],
     },
     electricite: {
       x: 96,
@@ -318,6 +399,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "electricite.svg",
+      searchAndReplace: [["#000000", bati.quelconque.cText]],
     },
     pov: {
       x: 128,
@@ -326,6 +408,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "point-de-vue.svg",
+      searchAndReplace: [["#000000", bati.autre.cText]],
     },
     fortification: {
       x: 160,
@@ -334,6 +417,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "fortification.svg",
+      searchAndReplace: [["#000000", bati.quelconque.cText]],
     },
     monument: {
       x: 192,
@@ -342,6 +426,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "monument.svg",
+      searchAndReplace: [["#000000", bati.monument.cText]],
     },
     priere: {
       x: 224,
@@ -350,6 +435,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "priere.svg",
+      searchAndReplace: [["#000000", bati.culte.cText]],
     },
     "station-eau": {
       x: 0,
@@ -358,6 +444,7 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "station-eau.svg",
+      searchAndReplace: [["#000000", bati.hydro.cText]],
     },
     cimetiere: {
       x: 32,
@@ -366,7 +453,10 @@ const sprite: Sprite = {
       height: 32,
       pixelRatio: 2,
       src: "cimetiere.svg",
-      searchAndReplace: [["#000000", "#aaaaaa"]],
+      searchAndReplace: [
+        ["#000000", bati.quelconque.cText],
+        ["#e6e6e6", bati.quelconque.cFill],
+      ],
     },
     /****************************** */
     glacier: {
@@ -385,6 +475,7 @@ const sprite: Sprite = {
       height: 64,
       pixelRatio: 2,
       src: "balise.svg",
+      searchAndReplace: [["#000000", bati.autre.cText]],
     },
     barriere: {
       x: 472,
@@ -393,6 +484,7 @@ const sprite: Sprite = {
       height: 21,
       pixelRatio: 2,
       src: "barriere.svg",
+      searchAndReplace: [["#000000", bati.quelconque.cText]],
     },
 
     phare: {
@@ -402,6 +494,7 @@ const sprite: Sprite = {
       height: 64,
       pixelRatio: 2,
       src: "phare.svg",
+      searchAndReplace: [["#000000", bati.autre.cText]],
     },
     rocher: {
       x: 304,

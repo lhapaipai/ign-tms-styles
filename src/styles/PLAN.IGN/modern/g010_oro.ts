@@ -20,7 +20,7 @@ export const g010_oro: LayerSpecification[] = [
     maxzoom: 20,
     filter: ["==", ["get", "symbo"], "ZONE_MARINE"],
     paint: {
-      "fill-color": cHydro.default,
+      "fill-color": cHydro.default[0],
     },
   },
   {

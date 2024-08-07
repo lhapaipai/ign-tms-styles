@@ -1,51 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   width="32"
-   height="32"
-   viewBox="0 0 256 256"
-   version="1.1"
-   id="svg1"
-   sodipodi:docname="chateau.svg"
-   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs1" />
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showguides="true"
-     inkscape:zoom="24.25"
-     inkscape:cx="16"
-     inkscape:cy="16"
-     inkscape:window-width="1920"
-     inkscape:window-height="1022"
-     inkscape:window-x="1920"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg1">
-    <sodipodi:guide
-       position="31.670103,160.65979"
-       orientation="1,0"
-       id="guide1"
-       inkscape:locked="false" />
+<svg width="32" height="32" viewBox="0 0 256 256" version="1.1" id="svg1" sodipodi:docname="chateau.svg" inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg">
+  <defs id="defs1" />
+  <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showguides="true" inkscape:zoom="24.25" inkscape:cx="16" inkscape:cy="16" inkscape:window-width="1920" inkscape:window-height="1022" inkscape:window-x="1920" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="svg1">
+    <sodipodi:guide position="31.670103,160.65979" orientation="1,0" id="guide1" inkscape:locked="false" />
   </sodipodi:namedview>
-  <path
-     fill="currentColor"
-     d="m 216.70005,212.66823 h -16.12728 v -101.491 l 11.39997,-11.399973 a 15.986168,15.986168 0 0 0 4.72731,-11.399972 V 43.331771 A 16.127282,16.127282 0 0 0 200.57277,27.204489 h -20.1591 a 8.0636409,8.0636409 0 0 0 -8.06365,8.063641 V 59.459053 H 148.1591 V 35.26813 a 8.0636409,8.0636409 0 0 0 -8.06364,-8.063641 H 115.90454 A 8.0636409,8.0636409 0 0 0 107.8409,35.26813 V 59.459053 H 83.649975 V 35.26813 A 8.0636409,8.0636409 0 0 0 75.586334,27.204489 H 55.427232 A 16.127282,16.127282 0 0 0 39.29995,43.331771 v 45.045514 a 15.986168,15.986168 0 0 0 4.72731,11.399972 l 11.399972,11.399973 v 101.491 H 39.29995 a 8.0636409,8.0636409 0 0 0 0,16.12728 h 177.4001 a 8.0636409,8.0636409 0 0 0 0,-16.12728 M 111.87272,164.28638 a 16.127282,16.127282 0 0 1 32.25456,0 v 48.38185 h -32.25456 z"
-     id="path2"
-     style="stroke-width:52.208;fill:#ffffff;fill-opacity:1;stroke-dasharray:none;stroke:#ffffff;stroke-opacity:1" />
-  <path
-     fill="currentColor"
-     d="m 216.70005,212.66823 h -16.12728 v -101.491 l 11.39997,-11.399973 a 15.986168,15.986168 0 0 0 4.72731,-11.399972 V 43.331771 A 16.127282,16.127282 0 0 0 200.57277,27.204489 h -20.1591 a 8.0636409,8.0636409 0 0 0 -8.06365,8.063641 V 59.459053 H 148.1591 V 35.26813 a 8.0636409,8.0636409 0 0 0 -8.06364,-8.063641 H 115.90454 A 8.0636409,8.0636409 0 0 0 107.8409,35.26813 V 59.459053 H 83.649975 V 35.26813 A 8.0636409,8.0636409 0 0 0 75.586334,27.204489 H 55.427232 A 16.127282,16.127282 0 0 0 39.29995,43.331771 v 45.045514 a 15.986168,15.986168 0 0 0 4.72731,11.399972 l 11.399972,11.399973 v 101.491 H 39.29995 a 8.0636409,8.0636409 0 0 0 0,16.12728 h 177.4001 a 8.0636409,8.0636409 0 0 0 0,-16.12728 M 111.87272,164.28638 a 16.127282,16.127282 0 0 1 32.25456,0 v 48.38185 h -32.25456 z"
-     id="path1"
-     style="stroke-width:1.00796;fill:#1f2937;fill-opacity:1" />
+  <path fill="currentColor" d="m 216.70005,212.66823 h -16.12728 v -101.491 l 11.39997,-11.399973 a 15.986168,15.986168 0 0 0 4.72731,-11.399972 V 43.331771 A 16.127282,16.127282 0 0 0 200.57277,27.204489 h -20.1591 a 8.0636409,8.0636409 0 0 0 -8.06365,8.063641 V 59.459053 H 148.1591 V 35.26813 a 8.0636409,8.0636409 0 0 0 -8.06364,-8.063641 H 115.90454 A 8.0636409,8.0636409 0 0 0 107.8409,35.26813 V 59.459053 H 83.649975 V 35.26813 A 8.0636409,8.0636409 0 0 0 75.586334,27.204489 H 55.427232 A 16.127282,16.127282 0 0 0 39.29995,43.331771 v 45.045514 a 15.986168,15.986168 0 0 0 4.72731,11.399972 l 11.399972,11.399973 v 101.491 H 39.29995 a 8.0636409,8.0636409 0 0 0 0,16.12728 h 177.4001 a 8.0636409,8.0636409 0 0 0 0,-16.12728 M 111.87272,164.28638 a 16.127282,16.127282 0 0 1 32.25456,0 v 48.38185 h -32.25456 z" id="path2" style="stroke-width:52.208;fill:#ffffff;fill-opacity:1;stroke-dasharray:none;stroke:#ffffff;stroke-opacity:1" />
+  <path fill="currentColor" d="m 216.70005,212.66823 h -16.12728 v -101.491 l 11.39997,-11.399973 a 15.986168,15.986168 0 0 0 4.72731,-11.399972 V 43.331771 A 16.127282,16.127282 0 0 0 200.57277,27.204489 h -20.1591 a 8.0636409,8.0636409 0 0 0 -8.06365,8.063641 V 59.459053 H 148.1591 V 35.26813 a 8.0636409,8.0636409 0 0 0 -8.06364,-8.063641 H 115.90454 A 8.0636409,8.0636409 0 0 0 107.8409,35.26813 V 59.459053 H 83.649975 V 35.26813 A 8.0636409,8.0636409 0 0 0 75.586334,27.204489 H 55.427232 A 16.127282,16.127282 0 0 0 39.29995,43.331771 v 45.045514 a 15.986168,15.986168 0 0 0 4.72731,11.399972 l 11.399972,11.399973 v 101.491 H 39.29995 a 8.0636409,8.0636409 0 0 0 0,16.12728 h 177.4001 a 8.0636409,8.0636409 0 0 0 0,-16.12728 M 111.87272,164.28638 a 16.127282,16.127282 0 0 1 32.25456,0 v 48.38185 h -32.25456 z" id="path1" style="stroke-width:1.00796;fill:#000000;fill-opacity:1" />
 </svg>

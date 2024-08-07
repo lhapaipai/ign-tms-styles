@@ -74,7 +74,10 @@ export const g097_bati_lineaire: LayerSpecification[] = [
       "line-cap": "round",
       "line-join": "round",
     },
-    paint: { "line-color": bati.cMur, "line-width": ["interpolate", ["linear"], ["zoom"], 15, 0.1, 16, 1, 19, 4] },
+    paint: {
+      "line-color": bati.autre.cLine,
+      "line-width": ["interpolate", ["linear"], ["zoom"], 15, 0.1, 16, 1, 19, 4],
+    },
   },
   {
     id: "construction hydrographique linéaire - Barrage",
@@ -90,7 +93,7 @@ export const g097_bati_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": bati.cBarrage,
+      "line-color": bati.autre.cLine,
       "line-width": ["interpolate", ["linear"], ["zoom"], 13, 1.5, 16, 7, 18, 20],
     },
   },
@@ -112,7 +115,7 @@ export const g097_bati_lineaire: LayerSpecification[] = [
       "line-join": "round",
     },
     paint: {
-      "line-color": bati.cMur,
+      "line-color": bati.autre.cLine,
       "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 17, 2.5],
     },
   },
