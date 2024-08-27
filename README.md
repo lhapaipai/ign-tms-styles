@@ -9,6 +9,8 @@
 
 ## Usage
 
+### Unpkg
+
 Vous pouvez utiliser le style directement depuis `unpkg.com`.
 
 l'url est de la forme :
@@ -26,8 +28,6 @@ Pour le choix entre `Layer`, `style`
     └── modern-dark
 ```
 
-## Exemple
-
 ```js
 import { Map } from "maplibre-gl";
 import "./style.css";
@@ -41,6 +41,27 @@ new Map({
 });
 ```
 
+### npm
+
+Vous pouvez aussi télécharger le module npm.
+
+```bash
+npm install ign-tms-styles
+```
+
+```js
+import { Map } from "maplibre-gl";
+import "./style.css";
+import "maplibre-gl/dist/maplibre-gl.css";
+import style from "ign-tms-styles/PLAN.IGN/modern.json?url";
+
+new Map({
+  // mêmes options que ci-dessus
+  style,
+});
+```
+
+
 ## Documentation
 
 - [service TMS](https://geoservices.ign.fr/documentation/services/services-geoplateforme/diffusion#70064) de l'IGN
@@ -53,20 +74,20 @@ new Map({
 
 ```bash
 pnpm tsx src/build-cli.ts --help
-pnpm tsx src/sprites/cli.ts --help
+pnpm tsx src/sprites/build-cli.ts --help
 
 # usages courants
 
 # pour regénérer les png manquants et le sprite
-pnpm tsx src/sprites/cli.ts
+pnpm tsx src/sprites/build-cli.ts
 
 # pour forcer la regénération d'une icone donnée même si elle existe et le sprite
-pnpm tsx src/sprites/cli.ts --icons parking
+pnpm tsx src/sprites/build-cli.ts --icons parking
 
 # pour forcer la regénération de plusieurs icônes même si elles existent
 # et le sprite
-pnpm tsx src/sprites/cli.ts --icons parking --icons phare
+pnpm tsx src/sprites/build-cli.ts --icons parking --icons phare
 
 # pour regénérer toutes les icones et le sprite
-pnpm tsx src/sprites/cli.ts --force
+pnpm tsx src/sprites/build-cli.ts --force
 ```

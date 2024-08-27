@@ -1,8 +1,17 @@
 {
   "name": "ign-tms-styles-private",
+  "description": "Styles personnalisés pour le service de tuiles vectorielles de l'IGN",
   "private": true,
   "version": "0.0.4",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lhapaipai/ign-tms-styles.git"
+  },
+  "author": {
+    "name": "Hugues Tavernier",
+    "email": "hugues.tavernier@protonmail.com"
+  },
   "scripts": {
     "dev:server": "pnpm listhen -w ./src/server.ts",
     "dev:viewer": "cd viewer && pnpm run dev",
