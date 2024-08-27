@@ -20,7 +20,7 @@ VERSION=$(npm --no-git-tag-version --allow-same-version version $VERSION_TYPE)
 VERSION=${VERSION:1}
 
 pnpm run build:sprite
-pnpm tsx src/cli.ts --spriteBase https://unpkg.com/ign-tms-styles@$VERSION/sprites
+pnpm tsx src/build-cli.ts --spriteBase https://unpkg.com/ign-tms-styles@$VERSION/sprites
 pnpm tsx src/generate-public-package.ts
 
 git add .

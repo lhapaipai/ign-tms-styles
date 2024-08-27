@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g150_autre_aerien: LayerSpecification[] = [
+export const g150_autre_aerien: () => LayerSpecification[] = () => [
   {
     id: "ligne electrique",
     type: "line",

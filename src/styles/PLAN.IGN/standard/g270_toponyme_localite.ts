@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g270_toponyme_localite: LayerSpecification[] = [
+export const g270_toponyme_localite: () => LayerSpecification[] = () => [
   {
     id: "toponyme localite n0 typoA4 non commune",
     type: "symbol",
@@ -872,6 +872,3 @@ export const g270_toponyme_localite: LayerSpecification[] = [
     },
   },
 ];
-
-// console.log(`ancien ${g270_toponyme_localite.length}`);
-// console.log(g270_toponyme_localite.map((s) => `${s.id}: ${s.minzoom} -> ${s.maxzoom}`));

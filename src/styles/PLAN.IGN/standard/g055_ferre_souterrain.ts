@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g055_ferre_souterrain: LayerSpecification[] = [
+export const g055_ferre_souterrain: () => LayerSpecification[] = () => [
   {
     id: "Ferre souterrain - voie normale",
     type: "line",

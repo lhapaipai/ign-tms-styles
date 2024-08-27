@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g120_routier_aerien: LayerSpecification[] = [
+export const g120_routier_aerien: () => LayerSpecification[] = () => [
   {
     id: "Chemin superieur - piste cyclable",
     type: "line",

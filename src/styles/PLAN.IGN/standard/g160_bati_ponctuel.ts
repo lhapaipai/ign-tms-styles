@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g160_bati_ponctuel: LayerSpecification[] = [
+export const g160_bati_ponctuel: () => LayerSpecification[] = () => [
   {
     id: "routier ponctuel - barriere",
     type: "symbol",

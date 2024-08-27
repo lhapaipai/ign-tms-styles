@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g051_routier_souterrain: LayerSpecification[] = [
+export const g051_routier_souterrain: () => LayerSpecification[] = () => [
   {
     id: "Chemin souterrain - piste cyclable",
     type: "line",

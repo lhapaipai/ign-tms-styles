@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g220_toponyme_limite: LayerSpecification[] = [
+export const g220_toponyme_limite: () => LayerSpecification[] = () => [
   {
     id: "toponyme - limite parc ponc 1 et 2",
     type: "symbol",

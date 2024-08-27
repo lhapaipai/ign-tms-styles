@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g095_bati_surf: LayerSpecification[] = [
+export const g095_bati_surf: () => LayerSpecification[] = () => [
   {
     id: "parcellaire - parcelle surface",
     type: "fill",

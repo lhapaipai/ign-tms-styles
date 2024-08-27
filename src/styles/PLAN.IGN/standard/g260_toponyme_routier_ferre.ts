@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g260_toponyme_routier_ferre: LayerSpecification[] = [
+export const g260_toponyme_routier_ferre: () => LayerSpecification[] = () => [
   {
     id: "toponyme ferre lineaire",
     type: "symbol",

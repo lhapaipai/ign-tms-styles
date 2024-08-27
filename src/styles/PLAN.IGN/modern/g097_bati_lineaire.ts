@@ -1,5 +1,4 @@
-import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
-import { bati } from "./vars";
+import { LayerGroupFactory } from "./types";
 // const metadata = [
 //   {
 //     id: "bati_lin",
@@ -54,69 +53,73 @@ import { bati } from "./vars";
  * Certains éléments aérien de `bati_lin` comme les cables et les remontées
  * mécaniques apparaissent dans g150_autre_aerien
  */
-export const g097_bati_lineaire: LayerSpecification[] = [
-  {
-    id: "construction linéaire - au sol",
-    type: "line",
-    source: "plan_ign",
-    "source-layer": "bati_lin",
-    minzoom: 13,
-    maxzoom: 20,
-    filter: [
-      "match",
-      ["get", "symbo"],
-      ["MUR", "MUR_PARAVALANCHE", "FORTIF_LIN", "MUR_SOUTENEMENT", "RUINE_LIN", "PECHERIE_LIN"],
-      true,
-      false,
-    ],
-    layout: {
-      visibility: "visible",
-      "line-cap": "round",
-      "line-join": "round",
+
+export const g097_bati_lineaire: LayerGroupFactory = (vars) => {
+  const { bati } = vars;
+  return [
+    {
+      id: "construction linéaire - au sol",
+      type: "line",
+      source: "plan_ign",
+      "source-layer": "bati_lin",
+      minzoom: 13,
+      maxzoom: 20,
+      filter: [
+        "match",
+        ["get", "symbo"],
+        ["MUR", "MUR_PARAVALANCHE", "FORTIF_LIN", "MUR_SOUTENEMENT", "RUINE_LIN", "PECHERIE_LIN"],
+        true,
+        false,
+      ],
+      layout: {
+        visibility: "visible",
+        "line-cap": "round",
+        "line-join": "round",
+      },
+      paint: {
+        "line-color": bati.autre.cLine,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 15, 0.1, 16, 1, 19, 4],
+      },
     },
-    paint: {
-      "line-color": bati.autre.cLine,
-      "line-width": ["interpolate", ["linear"], ["zoom"], 15, 0.1, 16, 1, 19, 4],
+    {
+      id: "construction hydrographique linéaire - Barrage",
+      type: "line",
+      source: "plan_ign",
+      "source-layer": "bati_lin",
+      minzoom: 13,
+      maxzoom: 20,
+      filter: ["==", ["get", "symbo"], "BARRAGE_LIN"],
+      layout: {
+        visibility: "visible",
+        "line-cap": "round",
+        "line-join": "round",
+      },
+      paint: {
+        "line-color": bati.autre.cLine,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 13, 1.5, 16, 7, 18, 20],
+      },
     },
-  },
-  {
-    id: "construction hydrographique linéaire - Barrage",
-    type: "line",
-    source: "plan_ign",
-    "source-layer": "bati_lin",
-    minzoom: 13,
-    maxzoom: 20,
-    filter: ["==", ["get", "symbo"], "BARRAGE_LIN"],
-    layout: {
-      visibility: "visible",
-      "line-cap": "round",
-      "line-join": "round",
+    {
+      id: "construction hydrographique linéaire - Quai",
+      type: "line",
+      source: "plan_ign",
+      "source-layer": "bati_lin",
+      /**
+       * la donnée est présente dès le zoom 12 mais est trop fine et a une précision trop faible
+       * voir la digue de la pointe de l'aiguillon vers la rochelle
+       */
+      minzoom: 13,
+      maxzoom: 20,
+      filter: ["match", ["get", "symbo"], ["DIGUE", "QUAI"], true, false],
+      layout: {
+        visibility: "visible",
+        "line-cap": "butt",
+        "line-join": "round",
+      },
+      paint: {
+        "line-color": bati.autre.cLine,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 17, 2.5],
+      },
     },
-    paint: {
-      "line-color": bati.autre.cLine,
-      "line-width": ["interpolate", ["linear"], ["zoom"], 13, 1.5, 16, 7, 18, 20],
-    },
-  },
-  {
-    id: "construction hydrographique linéaire - Quai",
-    type: "line",
-    source: "plan_ign",
-    "source-layer": "bati_lin",
-    /**
-     * la donnée est présente dès le zoom 12 mais est trop fine et a une précision trop faible
-     * voir la digue de la pointe de l'aiguillon vers la rochelle
-     */
-    minzoom: 13,
-    maxzoom: 20,
-    filter: ["match", ["get", "symbo"], ["DIGUE", "QUAI"], true, false],
-    layout: {
-      visibility: "visible",
-      "line-cap": "butt",
-      "line-join": "round",
-    },
-    paint: {
-      "line-color": bati.autre.cLine,
-      "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 17, 2.5],
-    },
-  },
-];
+  ];
+};

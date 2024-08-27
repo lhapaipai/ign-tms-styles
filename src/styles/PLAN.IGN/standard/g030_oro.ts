@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g030_oro: LayerSpecification[] = [
+export const g030_oro: () => LayerSpecification[] = () => [
   {
     id: "oro - courbe et cuvette maitresse",
     type: "line",

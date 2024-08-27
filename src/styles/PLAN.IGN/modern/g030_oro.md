@@ -1,7 +1,8 @@
 a été retiré pour le moment
 
 ```ts
-import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
+import { LayerGroupFactory } from "./types";
+
 
 export const v2_01_oro: LayerSpecification[] = [
   {

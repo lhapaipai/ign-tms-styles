@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g250_toponyme_oro: LayerSpecification[] = [
+export const g250_toponyme_oro: () => LayerSpecification[] = () => [
   {
     id: "toponyme - oro lineaire 1",
     type: "symbol",

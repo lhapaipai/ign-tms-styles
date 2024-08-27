@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g130_ferre_aerien: LayerSpecification[] = [
+export const g130_ferre_aerien: () => LayerSpecification[] = () => [
   {
     id: "Ferre superieur - voie normale",
     type: "line",

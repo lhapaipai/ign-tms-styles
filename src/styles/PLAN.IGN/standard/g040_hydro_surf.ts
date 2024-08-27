@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g040_hydro_surf: LayerSpecification[] = [
+export const g040_hydro_surf: () => LayerSpecification[] = () => [
   {
     id: "hydro surfacique",
     type: "fill",

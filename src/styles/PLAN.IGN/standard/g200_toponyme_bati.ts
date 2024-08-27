@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g200_toponyme_bati: LayerSpecification[] = [
+export const g200_toponyme_bati: () => LayerSpecification[] = () => [
   {
     id: "toponyme bati station de métro + bati ponctuel metro",
     type: "symbol",

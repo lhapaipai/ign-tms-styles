@@ -16,12 +16,12 @@ export type BuildStyleOptions = {
 };
 
 export async function buildStyle(name: ConfigName, { outDir, spriteBase }: BuildStyleOptions) {
-  const { layerGroups, sprite } = configs[name];
+  const { layerGroups, sprite, vars } = configs[name];
 
   const layerGroupsId = Object.keys(layerGroups) as (keyof typeof layerGroups)[];
 
   const layersToAdd = layerGroupsId.sort().map((groupId) => {
-    return layerGroups[groupId];
+    return layerGroups[groupId](vars);
   });
   // @ts-ignore
   const layersConcat = [].concat(...layersToAdd);

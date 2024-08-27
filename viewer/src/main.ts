@@ -9,8 +9,8 @@ import ViewInEDIControl from "./controls/ViewInEDIControl";
 import { getStyleURL } from "./util";
 import LayersControl from "./controls/LayersControl";
 
-const beforeStyleDir = "PLAN.IGN/standard";
-const afterStyleDir = "PLAN.IGN/modern-dark";
+const beforeConfigId = "PLAN.IGN/modern";
+const afterConfigId = "PLAN.IGN/modern-dark";
 
 const initialCenter: [number, number] = [1.3, 46.9];
 const initialZoom = 5;
@@ -19,22 +19,24 @@ const layersControl = new LayersControl();
 
 const beforeMap = new Map({
   container: "before-map",
-  style: getStyleURL(beforeStyleDir, layersControl.getSearch()),
+  style: getStyleURL(beforeConfigId, layersControl.getSearch()),
   center: initialCenter,
   zoom: initialZoom,
   hash: true,
 });
 const afterMap = new Map({
   container: "after-map",
-  style: getStyleURL(afterStyleDir, layersControl.getSearch()),
+  style: getStyleURL(afterConfigId, layersControl.getSearch()),
   center: initialCenter,
   zoom: initialZoom,
   hash: true,
 });
+
+// @ts-ignore
 new window.maplibregl.Compare(beforeMap, afterMap, "#comparison-container");
 
-layersControl.addConfig(beforeMap, beforeStyleDir);
-layersControl.addConfig(afterMap, afterStyleDir);
+layersControl.addConfig(beforeMap, beforeConfigId);
+layersControl.addConfig(afterMap, afterConfigId);
 layersControl.addFilter("routes", [
   "g042_routier_surf",
   "g051_routier_souterrain",
@@ -55,10 +57,10 @@ const inspector = new InspectorControl();
 inspector.addTo(beforeMap, afterMap);
 
 const viewInEdi1 = new ViewInEDIControl();
-viewInEdi1.addTo(beforeMap, beforeStyleDir);
+viewInEdi1.addTo(beforeMap, beforeConfigId);
 
 const viewInEdi2 = new ViewInEDIControl();
-viewInEdi2.addTo(afterMap, afterStyleDir);
+viewInEdi2.addTo(afterMap, afterConfigId);
 
 function refreshInfobox() {
   document.querySelector<HTMLDivElement>("#zoom")!.innerHTML = (Math.round(beforeMap.getZoom() * 10) / 10).toString();

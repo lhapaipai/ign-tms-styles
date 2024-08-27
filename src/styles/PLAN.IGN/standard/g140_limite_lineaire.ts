@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g140_limite_lineaire: LayerSpecification[] = [
+export const g140_limite_lineaire: () => LayerSpecification[] = () => [
   {
     id: "Limite - cloture",
     type: "line",

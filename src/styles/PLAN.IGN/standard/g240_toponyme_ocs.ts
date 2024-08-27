@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g240_toponyme_ocs: LayerSpecification[] = [
+export const g240_toponyme_ocs: () => LayerSpecification[] = () => [
   {
     id: "toponyme - ocs lineaire 1",
     type: "symbol",

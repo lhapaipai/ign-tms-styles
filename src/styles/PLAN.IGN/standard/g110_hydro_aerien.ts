@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g110_hydro_aerien: LayerSpecification[] = [
+export const g110_hydro_aerien: () => LayerSpecification[] = () => [
   {
     id: "réseau hydro  - cours d'eau superieur",
     type: "line",

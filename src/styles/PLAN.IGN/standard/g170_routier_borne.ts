@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g170_routier_borne: LayerSpecification[] = [
+export const g170_routier_borne: () => LayerSpecification[] = () => [
   {
     id: "toponyme - bornes postales haute - chemins",
     type: "symbol",

@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g042_routier_surf: LayerSpecification[] = [
+export const g042_routier_surf: () => LayerSpecification[] = () => [
   {
     id: "Routier surfacique",
     type: "fill",

@@ -21,13 +21,12 @@ router.get(
   "/:resource/:style",
   defineEventHandler(async (event) => {
     const params = getRouterParams(event);
-    const style = basename(params.style, ".json") as "standard" | "modern" | "modern-dark";
+    const style = basename(params.style, ".json");
 
-    if (!["standard", "modern", "modern-dark"].includes(style)) {
+    if (!Object.keys(configs).includes(style)) {
       throw new Error(`unknown style ${style} !`);
     }
 
-    // @ts-ignore
     const config = configs[`${params.resource}/${style}`] as Config;
 
     const queryParams = getQuery(event);
@@ -40,14 +39,12 @@ router.get(
     }
 
     const layersToAdd = layerGroupsEnabled.sort().map((layerId) => {
-      return config.layerGroups[layerId] || [];
+      return config.layerGroups[layerId](config.vars) || [];
     });
 
     // @ts-ignore
     const layersConcat = [].concat(...layersToAdd);
 
-    const sprite = style === "standard" ? "PlanIgn" : "basic";
-
-    return generateStyle(layersConcat, `/sprites/${sprite}`);
+    return generateStyle(layersConcat, `/sprites/${config.sprite}`);
   }),
 );

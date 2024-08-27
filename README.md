@@ -52,7 +52,7 @@ new Map({
 
 
 ```bash
-pnpm tsx src/cli.ts --help
+pnpm tsx src/build-cli.ts --help
 pnpm tsx src/sprites/cli.ts --help
 
 # usages courants
@@ -70,7 +70,3 @@ pnpm tsx src/sprites/cli.ts --icons parking --icons phare
 # pour regénérer toutes les icones et le sprite
 pnpm tsx src/sprites/cli.ts --force
 ```
-
-## Développeurs
-
-ne pas toucher aux fichiers gXXX du dossier modern-dark il s'agit de liens physiques vers le dossier modern.

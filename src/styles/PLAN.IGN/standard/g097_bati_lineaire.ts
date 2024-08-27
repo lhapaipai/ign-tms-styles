@@ -1,6 +1,6 @@
 import { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 
-export const g097_bati_lineaire: LayerSpecification[] = [
+export const g097_bati_lineaire: () => LayerSpecification[] = () => [
   {
     id: "construction linéaire - mur",
     type: "line",

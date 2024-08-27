@@ -8,12 +8,12 @@
     "dev:viewer": "cd viewer && pnpm run dev",
     "dev": "run-p dev:*",
     "stats": "tsx src/stats.ts",
-    "build:sprite": "tsx src/sprites/cli.ts",
-    "build:style": "tsx src/cli.ts",
+    "build:sprite": "tsx src/sprites/build-cli.ts",
+    "build:style": "tsx src/build-cli.ts",
     "build:pkg": "tsx src/generate-public-package.ts",
     "build": "run-p build:*",
-    "lonlat:sprite": "tsx src/sprites/cli.ts --outDir ~/projets/lonlat/extra/assets/public/sprites",
-    "lonlat:style": "tsx src/cli.ts --outDir ~/projets/lonlat/extra/assets/public/styles/ign --spriteBase https://assets.lonlat.org/sprites",
+    "lonlat:sprite": "tsx src/sprites/build-cli.ts --outDir ~/projets/lonlat/extra/assets/public/sprites",
+    "lonlat:style": "tsx src/build-cli.ts --outDir ~/projets/lonlat/extra/assets/public/styles/ign --spriteBase https://assets.lonlat.org/sprites",
     "lonlat": "run-p lonlat:*"
   },
   "devDependencies": {
