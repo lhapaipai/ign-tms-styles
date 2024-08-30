@@ -23,11 +23,13 @@ router.get(
     const params = getRouterParams(event);
     const style = basename(params.style, ".json");
 
-    if (!Object.keys(configs).includes(style)) {
-      throw new Error(`unknown style ${style} !`);
+    const configId = `${params.resource}/${style}` as keyof Config;
+
+    if (!Object.keys(configs).includes(configId)) {
+      throw new Error(`unknown config ${configId} !`);
     }
 
-    const config = configs[`${params.resource}/${style}`] as Config;
+    const config = configs[configId];
 
     const queryParams = getQuery(event);
     let layerGroupsEnabled = Object.keys(queryParams);
